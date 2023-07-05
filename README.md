@@ -1,4 +1,4 @@
-# Mealy App
+# MetaPortal NFT Portfolio App
 
 This is an App Frontend built with [React](https://reactjs.org/) (Frontend)
 
