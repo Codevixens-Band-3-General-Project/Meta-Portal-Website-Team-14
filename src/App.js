@@ -1,5 +1,12 @@
 import "./App.css";
+import Navbar from "./component/navbar/Navbar";
 
-const App = () => <div>MetaPortal NFT Portfolio web App</div>;
+function App() {
+  return (
+    <div className="App">
+      <Navbar />
+    </div>
+  );
+}
 
 export default App;
