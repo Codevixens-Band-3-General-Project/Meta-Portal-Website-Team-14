@@ -1,0 +1,81 @@
+.metaportal_fn_items .item {
+    width: 200px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 23px 23px 17px;
+    background-color: #130f15;
+    display: flex;
+    -ms-align-items: center;
+    align-items: center;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
+    position: relative;
+}
+
+.metaportal_fn_items .item:before {
+    right: 0;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    position: absolute;
+    color: var(--mc1);
+    content: '';
+    opacity: .15;
+    border-radius: 5px;
+    box-shadow: 0 5px 20px;
+}
+
+.metaportal_fn_items a {
+    position: absolute;
+    display: block;
+    text-decoration: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 15;
+}
+
+.metaportal_fn_items .icon {
+    width: 50px;
+    height: 50px;
+    background-color: #000;
+    display: flex;
+    -ms-align-items: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    position: relative;
+    margin-bottom: 9px;
+}
+
+.metaportal_fn_items .icon img {
+    z-index: 5;
+    position: relative;
+}
+
+.metaportal_fn_items .icon:after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    color: var(--mc1);
+    opacity: .15;
+    left: 0;
+    top: 0;
+    border-radius: 100%;
+    box-shadow: 0 5px 20px;
+    transition: .3s;
+}
+
+.metaportal_fn_items .text {
+    font-size: 16px;
+    font-family: var(--hff);
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    color: var(--hc);
+}

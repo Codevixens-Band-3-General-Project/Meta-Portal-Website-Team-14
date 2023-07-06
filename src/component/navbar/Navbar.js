@@ -3,12 +3,19 @@ import { useState } from "react";
 import logo from "../../images/logo.png";
 import "./Navbar.css";
 import Button from "../Button/Button";
+import Context from "../context/Context";
+import { useContext } from "react";
 
 export default function Navbar() {
   const [isShown, setIsShown] = useState(false);
+  const { walletConnected, IsConnected } = useContext(Context);
 
   const handleClick = (event) => {
     setIsShown((current) => !current);
+  };
+
+  const ConnectToWallet = (event) => {
+    IsConnected(true);
   };
 
   return (
@@ -31,7 +38,7 @@ export default function Navbar() {
                   <Link to="https://www.instagram.com/">In.</Link>
                 </li>
                 <li>
-                  <Link href="https://www.linkedin.com/" target="_blank">
+                  <Link to="https://www.linkedin.com/" target="_blank">
                     Ln.
                   </Link>
                 </li>
@@ -39,16 +46,19 @@ export default function Navbar() {
             </div>
           </div>
           <div className="wallet">
-            <Button text="Wallet" />
+            <Button text="Wallet" handleBtnClick={ConnectToWallet} />
           </div>
         </div>
         <div className="mob_mid">
           <div className="logo">
-            <Link href="index.html">
+            <Link to="/">
               <img src={logo} alt="" />
             </Link>
           </div>
-          <div className="trigger" onClick={handleClick}>
+          <div
+            className={isShown ? "trigger active" : "trigger"}
+            onClick={handleClick}
+          >
             <span></span>
           </div>
         </div>
@@ -56,27 +66,27 @@ export default function Navbar() {
           <div className="mob_bot">
             <ul>
               <li>
-                <Link className="creative_link" href="#home">
+                <Link className="creative_link" to="/">
                   Home
                 </Link>
               </li>
               <li>
-                <Link className="creative_link" href="#about">
+                <Link className="creative_link" to="/about">
                   About
                 </Link>
               </li>
               <li>
-                <Link className="creative_link" href="#collection">
+                <Link className="creative_link" to="/collection">
                   Collection
                 </Link>
               </li>
               <li>
-                <Link className="creative_link" href="#news">
+                <Link className="creative_link" to="/news">
                   Blog
                 </Link>
               </li>
               <li>
-                <Link className="creative_link" href="#contact">
+                <Link className="creative_link" to="/contact">
                   Contact
                 </Link>
               </li>
@@ -129,7 +139,10 @@ export default function Navbar() {
             </div>
 
             <div className="wallet">
-              <Button text="Connect To Wallet" />
+              <Button
+                text="Connect To Wallet"
+                handleBtnClick={ConnectToWallet}
+              />
             </div>
           </div>
         </div>

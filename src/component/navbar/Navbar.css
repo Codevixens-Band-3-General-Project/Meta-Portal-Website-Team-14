@@ -167,19 +167,6 @@ a.full_link {
     cursor: pointer;
 }
 
-
-
-@keyframes animatedgradient {
-    0%,
-    100% {
-        background-position: 0 50%
-    }
-
-    50% {
-        background-position: 100% 50%
-    }
-}
-
 .metaportal_fn_totop {
     display: block;
     margin: 0;
@@ -403,7 +390,7 @@ a.full_link {
 
 @media(max-width: 1040px) {
     .metaportal_fn_mobnav {
-        display: block
+        display: block;
     }
 
     #header {
@@ -411,11 +398,6 @@ a.full_link {
     }
 
 }
-
 .show{
     display: block;
-}
-
-.hide{
-    display: none;
 }

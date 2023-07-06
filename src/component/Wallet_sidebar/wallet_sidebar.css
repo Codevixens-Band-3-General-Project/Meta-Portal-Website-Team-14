@@ -1,0 +1,213 @@
+.metaportal_fn_leftnav.active,
+.metaportal_fn_leftnav_closer.active,
+.metaportal_fn_wallet_closer.active,
+.metaportal_fn_walletbox.active {
+    transform: translateX(0)
+}
+
+.metaportal_fn_wallet_closer {
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .8);
+    transition: .5s;
+    cursor: pointer;
+    transform: translateX(-102%)
+}
+
+.metaportal_fn_walletbox {
+    width: 400px;
+    position: fixed;
+    transition: .5s;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #999 #fff;
+    bottom: 0
+}
+
+.metaportal_fn_leftnav .navbox,
+.metaportal_fn_walletbox .walletbox {
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
+    justify-content: center
+}
+
+.metaportal_fn_walletbox {
+    transform: translateX(102%);
+    right: 0;
+    top: 0;
+    background-color: #130f15;
+    z-index: 9999;
+    padding: 100px 40px
+}
+
+.metaportal_fn_walletbox::-webkit-scrollbar {
+    width: 4px
+}
+
+.metaportal_fn_walletbox:-webkit-scrollbar-track {
+    background: #444
+}
+
+.metaportal_fn_walletbox::-webkit-scrollbar-thumb {
+    background-color: var(--mc1)
+}
+
+.metaportal_fn_walletbox .title_holder {
+    text-align: center;
+    margin-bottom: 23px
+}
+
+.metaportal_fn_walletbox .title_holder h3 {
+    margin: 0 0 18px;
+    font-size: 22px;
+    letter-spacing: .5px;
+    text-transform: uppercase
+}
+
+.metaportal_fn_walletbox .title_holder p {
+    margin: 0;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 1.5;
+    color: #888
+}
+
+.metaportal_fn_items .item:after {
+    background: -moz-linear-gradient(45deg, var(--mc1), var(--mc2), var(--mc1), var(--mc2)) border-box;
+    background: -webkit-linear-gradient(45deg, var(--mc1), var(--mc2), var(--mc1), var(--mc2)) border-box;
+    -webkit-mask-composite: destination-out;
+    -webkit-animation: 4s infinite alternate animatedgradient;
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0)
+}
+
+.metaportal_fn_items li{
+    margin-bottom: 20px
+}
+
+.metaportal_fn_items .item {
+    width: 200px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 23px 23px 17px;
+    background-color: #130f15;
+    display: flex;
+    -ms-align-items: center;
+    align-items: center;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
+    position: relative
+}
+
+.fn__closer,
+.metaportal_fn_items .icon {
+    width: 50px;
+    height: 50px;
+    background-color: #000
+}
+
+.metaportal_fn_items a {
+    position: absolute;
+    display: block;
+    text-decoration: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 15
+}
+
+.metaportal_fn_items .item:before {
+    right: 0;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    position: absolute;
+    color: var(--mc1);
+    content: '';
+    opacity: .15;
+    border-radius: 5px;
+    box-shadow: 0 5px 20px
+}
+
+.metaportal_fn_items .item:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 5px;
+    border: 3px solid transparent;
+    background: linear-gradient(45deg, var(--mc1), var(--mc2), var(--mc1), var(--mc2)) border-box;
+    -webkit-mask-composite: source-out;
+    mask-composite: exclude;
+    background-size: 300% 300%;
+    animation: 4s infinite alternate animatedgradient
+}
+
+.metaportal_fn_items .icon {
+    display: flex;
+    -ms-align-items: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    position: relative;
+    margin-bottom: 9px
+}
+
+.metaportal_fn_items .icon img {
+    z-index: 5;
+    position: relative
+}
+
+.metaportal_fn_items .fn__svg {
+    width: 22px;
+    height: 22px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -11px 0 0 -11px
+}
+
+.metaportal_fn_items .icon:after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    color: var(--mc1);
+    opacity: .15;
+    left: 0;
+    top: 0;
+    border-radius: 100%;
+    box-shadow: 0 5px 20px;
+    transition: .3s
+}
+
+.metaportal_fn_items .text {
+    font-size: 16px;
+    font-family: var(--hff);
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    color: var(--hc)
+}
+
+@media(max-width: 768px) {
+    .metaportal_fn_items .item,
+    .metaportal_fn_walletbox {
+        width: 100%
+    }
+
+}
