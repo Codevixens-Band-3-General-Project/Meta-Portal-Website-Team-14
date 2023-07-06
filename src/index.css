@@ -50,6 +50,16 @@ body:before {
   position: fixed
 }
 
+body:before {
+  content: '';
+  top: 27.5%;
+  left: 23.9%;
+  background-color: var(--mc1);
+  -webkit-filter: blur(150px);
+  -o-filter: blur(150px);
+  filter: blur(150px);
+}
+
 body{
   letter-spacing: 0
 }
@@ -71,4 +81,42 @@ html:before {
   50% {
     background-position: 100% 50%
   }
+}
+
+.creative_link:hover:before {
+  width: 100%
+}
+
+.creative_link {
+  background-image: -moz-linear-gradient(90deg, var(--mc1), var(--mc1) 50%, #ddd 50%);
+  background-image: -webkit-linear-gradient(90deg, var(--mc1), var(--mc1) 50%, #ddd 50%);
+  background-image: linear-gradient(to right, var(--mc1), var(--mc1) 50%, #ddd 50%);
+  background-size: 200% 100%;
+  background-position: -100%;
+  display: inline-block;
+  position: relative;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: .3s ease-in-out
+}
+
+.creative_link:before {
+  content: "";
+  background: #cc00ff;
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  transition: .3s ease-in-out
+}
+
+.creative_link:hover {
+  background-position: 0
+}
+
+a {
+  transition: all .3s ease;
+  border: none;
 }

@@ -21,26 +21,9 @@ a.full_link {
     z-index: 1
 }
 
-.metaportal_fn_main,
-.metaportal_fn_main * {
-    box-sizing: border-box
-}
-
-.metaportal_fn_main {
-    position: relative;
-    z-index: 2;
-    display: flex;
-    -webkit-flex-direction: column;
-    -moz-flex-direction: column;
-    -ms-flex-direction: column;
-    -o-flex-direction: column;
-    flex-direction: column;
-    min-height: 100vh
-}
-
 .metaportal_fn_mobnav {
     display: none;
-    overflow: hidden
+    overflow: hidden;
 }
 
 .header .trigger_logo,
@@ -49,11 +32,6 @@ a.full_link {
     display: flex;
     -ms-align-items: center;
     align-items: center
-}
-
-.header .trigger,
-.metaportal_fn_mobnav .social_trigger .trigger {
-    margin-right: 20px
 }
 
 .metaportal_fn_mobnav .mob_mid,
@@ -79,7 +57,13 @@ a.full_link {
 .metaportal_fn_mobnav .mob_bot {
     background: #1b121d;
     padding: 21px 20px;
-    overflow: hidden
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s ease;
+}
+
+.metaportal_fn_mobnav .mob_bot.active {
+    transform: scaleY(1);
 }
 
 .metaportal_fn_items,
@@ -155,18 +139,6 @@ a.full_link {
     text-decoration: none
 }
 
-.trigger {
-    height: 50px;
-    background-color: #000;
-    z-index: 5;
-    position: relative;
-    display: block;
-    width: 50px;
-    border-radius: 100%;
-    color: #bbb;
-    cursor: pointer;
-}
-
 .metaportal_fn_totop {
     display: block;
     margin: 0;
@@ -207,27 +179,6 @@ a.full_link {
     transition: .3s
 }
 
-.metaportal_fn_totop:hover .icon:after,
-.trigger.active:after,
-.trigger:hover:after {
-    opacity: .5
-}
-
-.metaportal_fn_totop .totop_inner {
-    -moz-transform: translateX(-50%) translateY(-50%) rotate(-90deg);
-    -webkit-transform: translateX(-50%) translateY(-50%) rotate(-90deg);
-    transform: translateX(-50%) translateY(-50%) rotate(-90deg);
-    display: flex;
-    top: 50%;
-    left: 50%;
-    position: absolute;
-    width: max-content;
-    -ms-align-items: center;
-    align-items: center
-}
-
-
-
 .header,
 .header:after {
     top: 0;
@@ -257,7 +208,7 @@ a.full_link {
 }
 
 .header.active:after {
-    transform: translateY(0)
+    transform: translateY(0);
 }
 
 .header.active {
@@ -267,81 +218,10 @@ a.full_link {
 }
 
 .header .header_in {
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
     display: flex;
     justify-content: space-between;
     -ms-align-items: center;
     align-items: center
-}
-
-
-.slider_nav .icon:after,
-.trigger:after {
-    content: '';
-    position: absolute;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    color: var(--mc1);
-    opacity: .15;
-    border-radius: 100%;
-    box-shadow: 0 5px 20px;
-    transition: .3s
-}
-
-.trigger.active span {
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    transform: rotate(45deg)
-}
-
-.trigger.active span:before {
-    bottom: 0;
-    -webkit-transform: rotate(-90deg);
-    -ms-transform: rotate(-90deg);
-    -o-transform: rotate(-90deg);
-    transform: rotate(-90deg)
-}
-
-.trigger.active span:after {
-    width: 0;
-    transition: none
-}
-
-.trigger span,
-.trigger span:after,
-.trigger span:before {
-    display: block;
-    height: 2px;
-    position: absolute;
-    background-color: #bbb;
-    content: '';
-    transition: .3s
-}
-
-
-.trigger span {
-    top: 24px;
-    width: 24px;
-    left: 13px
-}
-
-.trigger span:before {
-    bottom: 6px;
-    width: 24px;
-    left: 0
-}
-
-.trigger span:after {
-    top: 6px;
-    width: 16px;
-    left: 0
 }
 
 .header .nav ul {
@@ -353,40 +233,6 @@ a.full_link {
 .header .nav li {
     margin: 0 0 0 45px
 }
-
-.creative_link:hover:before {
-    width: 100%
-}
-
-.creative_link {
-    background-image: -moz-linear-gradient(90deg, var(--mc1), var(--mc1) 50%, #ddd 50%);
-    background-image: -webkit-linear-gradient(90deg, var(--mc1), var(--mc1) 50%, #ddd 50%);
-    background-image: linear-gradient(to right, var(--mc1), var(--mc1) 50%, #ddd 50%);
-    background-size: 200% 100%;
-    background-position: -100%;
-    display: inline-block;
-    position: relative;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    transition: .3s ease-in-out
-}
-
-.creative_link:before {
-    content: "";
-    background: #cc00ff;
-    display: block;
-    position: absolute;
-    bottom: -3px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    transition: .3s ease-in-out
-}
-
-.creative_link:hover {
-    background-position: 0
-}
-
 
 @media(max-width: 1040px) {
     .metaportal_fn_mobnav {

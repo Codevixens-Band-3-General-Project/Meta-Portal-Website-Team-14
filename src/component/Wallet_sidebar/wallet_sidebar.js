@@ -59,7 +59,7 @@ export default function WalletSidebar() {
             : "metaportal_fn_walletbox"
         }
       >
-        <Link to="/</div>" className="fn__closer">
+        <Link to="/" className="fn__closer" onClick={handleClick}>
           <span></span>
         </Link>
         <div className="walletbox">
