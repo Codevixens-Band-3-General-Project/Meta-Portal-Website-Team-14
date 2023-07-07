@@ -57,6 +57,9 @@ export default function LeftSidebar() {
     transformMore((more) => !more);
   };
 
+  const moreActive = (event) => {
+    transformMore(true);
+  };
   return (
     <Sidebar
       clickHandler={handleClick}
@@ -90,7 +93,9 @@ export default function LeftSidebar() {
 
             <ul
               style={(() => {
-                if (pages || home) {
+                if (!more) {
+                  return transform200;
+                } else if (pages || home) {
                   return transform100;
                 } else {
                   return transform0;
@@ -262,7 +267,11 @@ export default function LeftSidebar() {
                     </Link>
                   </li>
                   <li>
-                    <Link to="/">
+                    <Link
+                      to="/"
+                      onClick={moreClicked}
+                      className={!more ? "active" : ""}
+                    >
                       <span className="creative_link">
                         More
                         <svg
@@ -285,7 +294,7 @@ export default function LeftSidebar() {
                     </Link>
                     <ul className="sub-menu">
                       <li>
-                        <Link to="/" className="prev">
+                        <Link to="/" className="prev" onClick={moreClicked}>
                           <span className="creative_link">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
