@@ -3,7 +3,7 @@ import VENLY from "../../images/venly.png";
 import COINBASE from "../../images/coinbase.png";
 import METAMASK from "../../images/metamask.png";
 import "./wallet_sidebar.css";
-import WalletItems from "../Sidebar_Crads/Sidebar_Cards";
+import Cards from "../Sidebar_Crads/Sidebar_Cards";
 import Context from "../context/Context";
 import { useContext } from "react";
 import Sidebar from "../Sidebar/Sidebar";
@@ -33,7 +33,7 @@ export default function WalletSidebar() {
   const sidebarItems = data.map((element) => {
     return (
       <li key={element.name}>
-        <WalletItems text={element.name} img={element.img} />
+        <Cards text={element.name} img={element.img} />
       </li>
     );
   });

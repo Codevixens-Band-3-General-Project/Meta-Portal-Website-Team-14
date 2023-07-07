@@ -1,7 +1,7 @@
 import "./Sidebar_Cards.css";
 import { Link } from "react-router-dom";
 
-export default function WalletItems({ text, img }) {
+export default function Cards({ text, img }) {
   return (
     <div className="item">
       <Link to="/"></Link>
