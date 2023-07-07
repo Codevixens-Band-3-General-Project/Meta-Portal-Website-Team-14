@@ -1,16 +1,30 @@
 import Sidebar from "../Sidebar/Sidebar";
 import Context from "../context/Context";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import OPENSEA from "../../images/opensea.png";
 import DISCORD from "../../images/discord.png";
 import "./LeftSidebar.css";
 import Cards from "../Sidebar_Crads/Sidebar_Cards";
+import { Link } from "react-router-dom";
 
 export default function LeftSidebar() {
   const { leftSidebar, IsOpen } = useContext(Context);
+  let [home, transformHome] = useState(false);
+  let [pages, transformPages] = useState(false);
+  let [more, transformMore] = useState(true);
 
   const handleClick = (event) => {
     IsOpen(false);
+  };
+
+  const transform0 = {
+    transform: "translateX(0%)",
+  };
+  const transform100 = {
+    transform: "translateX(-100%)",
+  };
+  const transform200 = {
+    transform: "translateX(-200%)",
   };
 
   const data = [
@@ -31,6 +45,17 @@ export default function LeftSidebar() {
       </li>
     );
   });
+
+  const homeClicked = (event) => {
+    transformHome((home) => !home);
+  };
+
+  const pagesClicked = (event) => {
+    transformPages((pages) => !pages);
+  };
+  const moreClicked = (event) => {
+    transformMore((more) => !more);
+  };
 
   return (
     <Sidebar
@@ -63,9 +88,21 @@ export default function LeftSidebar() {
               </svg>
             </span>
 
-            <ul className="leftnav_multilevel">
+            <ul
+              style={(() => {
+                if (pages || home) {
+                  return transform100;
+                } else {
+                  return transform0;
+                }
+              })()}
+            >
               <li>
-                <a href="#" className="active">
+                <Link
+                  to="/"
+                  onClick={homeClicked}
+                  className={home ? "active" : ""}
+                >
                   <span className="creative_link">
                     Home
                     <svg
@@ -85,10 +122,10 @@ export default function LeftSidebar() {
                       </g>
                     </svg>
                   </span>
-                </a>
+                </Link>
                 <ul className="sub-menu">
                   <li>
-                    <a href="#" className="prev">
+                    <Link to="/" className="prev" onClick={homeClicked}>
                       <span className="creative_link">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -108,54 +145,58 @@ export default function LeftSidebar() {
                         </svg>
                         Home
                       </span>
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="index.html">
+                    <Link href="index.html">
                       <span className="creative_link">#1 3D Carousel</span>
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="index-2.html">
+                    <Link href="index-2.html">
                       <span className="creative_link">#2 Bended Carousel</span>
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="index-3.html">
+                    <Link href="index-3.html">
                       <span className="creative_link">#3 Video Background</span>
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="index-4.html">
+                    <Link href="index-4.html">
                       <span className="creative_link">#4 Water Effect</span>
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="index-5.html">
+                    <Link href="index-5.html">
                       <span className="creative_link">#5 Simple Carousel</span>
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="index-6.html">
+                    <Link href="index-6.html">
                       <span className="creative_link">
                         #6 Fullscreen Slider
                       </span>
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </li>
               <li>
-                <a href="nft-single.html">
+                <Link href="nft-single.html">
                   <span className="creative_link">Mint Page</span>
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="collection.html">
+                <Link href="collection.html">
                   <span className="creative_link">Collection</span>
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#">
+                <Link
+                  to="/"
+                  onClick={pagesClicked}
+                  className={pages ? "active" : ""}
+                >
                   <span className="creative_link">
                     Pages
                     <svg
@@ -175,30 +216,53 @@ export default function LeftSidebar() {
                       </g>
                     </svg>
                   </span>
-                </a>
+                </Link>
                 <ul className="sub-menu">
                   <li>
-                    <a href="coming-soon.html">
+                    <Link to="/" className="prev" onClick={pagesClicked}>
+                      <span className="creative_link">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          version="1.0"
+                          width="512.000000pt"
+                          height="512.000000pt"
+                          viewBox="0 0 512.000000 512.000000"
+                          preserveAspectRatio="xMidYMid meet"
+                          className="fn__svg replaced-svg"
+                        >
+                          <g
+                            transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
+                            stroke="none"
+                          >
+                            <path d="M352 3837 l-352 -352 1280 -1280 1280 -1280 1280 1280 1280 1280 -352 352 -353 353 -927 -927 -928 -928 -928 928 -927 927 -353 -353z"></path>
+                          </g>
+                        </svg>
+                        Pages
+                      </span>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="coming-soon.html">
                       <span className="creative_link">Coming Soon</span>
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="404.html">
+                    <Link href="404.html">
                       <span className="creative_link">404 Page</span>
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="protected.html">
+                    <Link href="protected.html">
                       <span className="creative_link">Protected Page</span>
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="no-results.html">
+                    <Link href="no-results.html">
                       <span className="creative_link">Search No Results</span>
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="#">
+                    <Link to="/">
                       <span className="creative_link">
                         More
                         <svg
@@ -218,38 +282,61 @@ export default function LeftSidebar() {
                           </g>
                         </svg>
                       </span>
-                    </a>
+                    </Link>
                     <ul className="sub-menu">
                       <li>
-                        <a href="cookies.html">
+                        <Link to="/" className="prev">
+                          <span className="creative_link">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              version="1.0"
+                              width="512.000000pt"
+                              height="512.000000pt"
+                              viewBox="0 0 512.000000 512.000000"
+                              preserveAspectRatio="xMidYMid meet"
+                              className="fn__svg replaced-svg"
+                            >
+                              <g
+                                transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
+                                stroke="none"
+                              >
+                                <path d="M352 3837 l-352 -352 1280 -1280 1280 -1280 1280 1280 1280 1280 -352 352 -353 353 -927 -927 -928 -928 -928 928 -927 927 -353 -353z"></path>
+                              </g>
+                            </svg>
+                            More
+                          </span>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href="cookies.html">
                           <span className="creative_link">Cookies</span>
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a href="privacy-policy.html">
+                        <Link href="privacy-policy.html">
                           <span className="creative_link">Privacy Policy</span>
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a href="terms-conditions.html">
+                        <Link href="terms-conditions.html">
                           <span className="creative_link">
                             Terms &amp; Conditions
                           </span>
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   </li>
                 </ul>
               </li>
               <li>
-                <a href="blog.html">
+                <Link href="blog.html">
                   <span className="creative_link">Blog</span>
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="blog-single.html">
+                <Link href="blog-single.html">
                   <span className="creative_link">Blog Single</span>
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -257,18 +344,18 @@ export default function LeftSidebar() {
             <div className="copyright">
               <p>
                 Copyright 2022 - Designed &amp; Developed by{" "}
-                <a
-                  href="https://themeforest.net/user/frenify/portfolio"
+                <Link
+                  to="https://themeforest.net/user/frenify/portfolio"
                   target="_blank"
                 >
                   Frenify
-                </a>
+                </Link>
               </p>
             </div>
             <div className="social_icons">
               <ul>
                 <li>
-                  <a href="#">
+                  <Link to="#">
                     {/*                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -302,10 +389,10 @@ export default function LeftSidebar() {
                       <g></g>
                       <g></g>
                     </svg> */}
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#">
+                  <Link to="#">
                     {/*                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -339,10 +426,10 @@ export default function LeftSidebar() {
                       <g></g>
                       <g></g>
                     </svg> */}
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#">
+                  <Link to="#">
                     {/*                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -386,10 +473,10 @@ export default function LeftSidebar() {
                       <g></g>
                       <g></g>
                     </svg> */}
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#">
+                  <Link to="#">
                     {/*                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -424,10 +511,10 @@ export default function LeftSidebar() {
                       <g></g>
                       <g></g>
                     </svg> */}
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#">
+                  <Link to="#">
                     {/*                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       version="1.0"
@@ -446,7 +533,7 @@ export default function LeftSidebar() {
                         <path d="M3800 3399 c-452 -46 -808 -332 -934 -749 -83 -275 -87 -661 -10 -926 80 -278 218 -450 482 -600 227 -130 541 -189 818 -155 303 38 505 129 684 311 125 126 211 266 239 389 l9 41 -314 0 -314 0 -35 -54 c-63 -99 -162 -164 -293 -192 -266 -56 -546 57 -645 260 -34 69 -67 194 -67 253 l0 43 852 0 851 0 -6 193 c-10 331 -61 524 -192 722 -187 282 -448 429 -830 465 -124 11 -173 11 -295 -1z m291 -503 c142 -31 274 -126 329 -240 32 -66 60 -163 60 -208 l0 -28 -525 0 -525 0 6 28 c17 79 49 171 76 220 41 72 122 154 184 185 103 52 267 70 395 43z"></path>
                       </g>
                     </svg> */}
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>

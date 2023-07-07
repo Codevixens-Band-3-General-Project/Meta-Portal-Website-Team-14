@@ -204,8 +204,8 @@ textarea:focus {
 .returnmessage {
     padding: 20px;
     width: 100%;
-/*     display: none;
- */    color: #eee;
+    display: none;
+    color: #eee;
     margin-top: 20px;
     position: relative;
 
