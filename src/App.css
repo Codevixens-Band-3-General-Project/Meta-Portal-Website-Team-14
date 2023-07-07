@@ -14,3 +14,65 @@
     flex-direction: column;
     min-height: 100vh
 }
+
+.container {
+    width: 100%;
+    max-width: 1800px;
+    padding: 0 100px;
+    margin: 0 auto
+}
+
+.container:after {
+    display: table;
+    content: '';
+    clear: both
+}
+
+@media(max-width: 1200px) {
+    .container {
+        padding: 0 40px
+    }
+}
+
+@media(max-width: 1040px) {
+    .container {
+        padding: 0 20px
+    }
+}
+
+@media(max-width: 480px) {
+    .container {
+        padding: 0 10px
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--hc);
+    font-family: var(--hff);
+    line-height: 1.22;
+    letter-spacing: 0
+}
+
+h1>a,
+h2>a,
+h3>a,
+h4>a,
+h5>a,
+h6>a {
+    text-decoration: none;
+    color: var(--hc)
+}
+
+h1>a:hover,
+h2>a:hover,
+h3>a:hover,
+h4>a:hover,
+h5>a:hover,
+h6>a:hover {
+    color: var(--mc1)
+}

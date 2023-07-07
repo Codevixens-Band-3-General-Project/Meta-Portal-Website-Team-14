@@ -1,15 +1,24 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useContext, useEffect } from "react";
 import logo from "../../images/logo.png";
 import "./Navbar.css";
 import Button from "../Button/Button";
 import Context from "../context/Context";
-import { useContext } from "react";
 import CircleBtn from "../CircleButton/CircleButton";
 
 export default function Navbar() {
   const [isShown, setIsShown] = useState(false);
   const { IsConnected } = useContext(Context);
+  const { leftSidebar, IsOpen } = useContext(Context);
+  const [effect, seteffect] = useState(false);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", () =>
+        seteffect(window.pageYOffset > 10)
+      );
+    }
+  }, []);
 
   const handleClick = (event) => {
     setIsShown((current) => !current);
@@ -19,12 +28,16 @@ export default function Navbar() {
     IsConnected(true);
   };
 
+  const OpenSidebar = (event) => {
+    IsOpen((leftSidebar) => !leftSidebar);
+  };
+
   return (
     <>
       <div className="metaportal_fn_mobnav">
         <div className="mob_top">
           <div className="social_trigger">
-            <CircleBtn />
+            <CircleBtn clickHandler={OpenSidebar} active={leftSidebar} />
             <div className="social">
               <ul>
                 <li>
@@ -43,7 +56,7 @@ export default function Navbar() {
             </div>
           </div>
           <div className="wallet">
-            <Button text="Wallet" handleBtnClick={ConnectToWallet} />
+            <Button text="Wallet" handleBtnClick={ConnectToWallet} full="" />
           </div>
         </div>
         <div className="mob_mid">
@@ -52,12 +65,7 @@ export default function Navbar() {
               <img src={logo} alt="" />
             </Link>
           </div>
-          <div
-            className={isShown ? "trigger active" : "trigger"}
-            onClick={handleClick}
-          >
-            <span></span>
-          </div>
+          <CircleBtn clickHandler={handleClick} active={isShown} />
         </div>
         <div className={isShown ? "mob_bot active" : "mob_bot"}>
           <ul>
@@ -90,10 +98,10 @@ export default function Navbar() {
         </div>
       </div>
       <header id="header">
-        <div className="header">
+        <div className={`header ${effect ? "active" : ""}`}>
           <div className="header_in">
             <div className="trigger_logo">
-              <CircleBtn />
+              <CircleBtn clickHandler={OpenSidebar} active={leftSidebar} />
               <div className="logo">
                 <Link to="/">
                   <img src={logo} alt="" />

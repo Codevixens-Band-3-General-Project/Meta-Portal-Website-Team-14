@@ -2,11 +2,11 @@ import WALLETCONNECT from "../../images/walletconnect.png";
 import VENLY from "../../images/venly.png";
 import COINBASE from "../../images/coinbase.png";
 import METAMASK from "../../images/metamask.png";
-import { Link } from "react-router-dom";
 import "./wallet_sidebar.css";
-import WalletItems from "./../Wallet_Items/Wallet_items";
+import WalletItems from "../Sidebar_Crads/Sidebar_Cards";
 import Context from "../context/Context";
 import { useContext } from "react";
+import Sidebar from "../Sidebar/Sidebar";
 
 export default function WalletSidebar() {
   const { walletConnected, IsConnected } = useContext(Context);
@@ -43,25 +43,12 @@ export default function WalletSidebar() {
   };
 
   return (
-    <>
-      <div
-        onClick={handleClick}
-        className={
-          walletConnected
-            ? "metaportal_fn_wallet_closer active"
-            : "metaportal_fn_wallet_closer"
-        }
-      ></div>
-      <div
-        className={
-          walletConnected
-            ? "metaportal_fn_walletbox active"
-            : "metaportal_fn_walletbox"
-        }
-      >
-        <Link to="/" className="fn__closer" onClick={handleClick}>
-          <span></span>
-        </Link>
+    <Sidebar
+      clickHandler={handleClick}
+      active={walletConnected}
+      _closer="metaportal_fn_wallet_closer"
+      _className="metaportal_fn_walletbox"
+      content={
         <div className="walletbox">
           <div className="title_holder">
             <h3>Connect Wallet</h3>
@@ -75,7 +62,7 @@ export default function WalletSidebar() {
             <ul className="metaportal_fn_items">{sidebarItems}</ul>
           </div>
         </div>
-      </div>
-    </>
+      }
+    />
   );
 }

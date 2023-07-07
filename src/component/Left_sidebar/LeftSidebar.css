@@ -1,0 +1,37 @@
+.metaportal_fn_leftnav_closer {
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .8);
+    transition: .5s;
+    cursor: pointer;
+    transform: translateX(102%);
+}
+
+.metaportal_fn_leftnav {
+    transform: translateX(-102%);
+    left: 0;
+    top: 0;
+    background-color: #130f15;
+    z-index: 9999;
+    padding: 70px 40px;
+}
+
+.metaportal_fn_leftnav {
+    width: 400px;
+    position: fixed;
+    transition: .5s;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #999 #fff;
+    bottom: 0;
+}
+
+@media(max-width: 768px) {
+    .metaportal_fn_leftnav {
+        width: 100%
+    }
+}

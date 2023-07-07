@@ -50,6 +50,16 @@ body:before {
   position: fixed
 }
 
+body:after {
+  content: '';
+  top: 42.8%;
+  right: 25%;
+  background-color: var(--mc2);
+  -webkit-filter: blur(150px);
+  -o-filter: blur(150px);
+  filter: blur(150px)
+}
+
 body:before {
   content: '';
   top: 27.5%;
@@ -57,7 +67,7 @@ body:before {
   background-color: var(--mc1);
   -webkit-filter: blur(150px);
   -o-filter: blur(150px);
-  filter: blur(150px);
+  filter: blur(150px)
 }
 
 body{
