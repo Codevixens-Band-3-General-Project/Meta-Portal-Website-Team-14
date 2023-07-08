@@ -6,6 +6,7 @@ import { useState } from "react";
 
 export default function Contact() {
   const [sent, Send] = useState(false);
+
   const {
     register,
     formState: { errors },
@@ -149,38 +150,41 @@ export default function Contact() {
                     </p>
                   </label>
                   <div className="mw300">
-                    <button type="submit">Submit</button>
-                    {/*                     <Button text="Send Message" full="full" />
-                     */}{" "}
+                    <Button text="Send Message" full="full" type="submit" />
                   </div>
                 </li>
               </ul>
             </div>
-
-            {(() => {
-              if (errors.email && errors.email.type == "pattern" && !sent) {
-                return (
-                  <div className="empty_notice active">
-                    <span>* Invalid Email *</span>
-                  </div>
-                );
-              } else if (
-                (errors.email || errors.name || errors.message) &&
-                !sent
-              ) {
-                return (
-                  <div className="empty_notice active">
-                    <span>! Please Fill Required Fields !</span>
-                  </div>
-                );
-              } else if (sent) {
-                return (
-                  <div className="returnmessage active">
-                    Your message has been received, We will contact you soon.
-                  </div>
-                );
+            <div
+              className={
+                "empty_notice" +
+                (errors.name || errors.email || errors.message ? " active" : "")
               }
-            })()}
+            >
+              <span>
+                {(() => {
+                  if (errors.email && errors.email.type == "pattern") {
+                    return "* Invalid Email *";
+                  } else if (errors.email || errors.name || errors.message) {
+                    return "! Please Fill Required Fields !";
+                  }
+                })()}
+              </span>
+            </div>
+
+            <div
+              className={
+                "returnmessage" +
+                (!(errors.name || errors.email || errors.message) && sent
+                  ? " active"
+                  : "")
+              }
+            >
+              <span>
+                {!(errors.name || errors.email || errors.message) &&
+                  "Your message has been received, We will contact you soon."}
+              </span>
+            </div>
           </form>
         </div>
       </div>

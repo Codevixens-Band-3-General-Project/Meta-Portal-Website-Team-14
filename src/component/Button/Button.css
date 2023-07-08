@@ -1,3 +1,7 @@
+button {
+    background: transparent;
+    border: none;
+}
 .metaportal_fn_button:hover:after {
     animation-duration: 2s
 }
