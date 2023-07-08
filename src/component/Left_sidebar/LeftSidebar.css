@@ -116,13 +116,6 @@
     padding: 0 17px
 }
 
-.metaportal_fn_leftnav .social_icons ul {
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex
-}
-
 .metaportal_fn_leftnav .nav_holder .fn__svg {
     -webkit-transform: rotate(-90deg);
     -ms-transform: rotate(-90deg);
