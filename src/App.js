@@ -10,6 +10,7 @@ import Main from "./Main";
 import ComingSoon from "./component/ComingSoon/ComingSoon";
 import NotFound from "./component/NotFound/NotFound.js";
 import ProtectedPage from "./component/ProtectedPage/ProtectedPage";
+import Page404 from "./component/Page404/Page404";
 
 function App() {
   const [walletConnected, IsConnected] = useState(false);
@@ -34,6 +35,7 @@ function App() {
             />
             <Route path="/NothingFound" element={<NotFound />} />
             <Route path="/protected" element={<ProtectedPage />} />
+            <Route path="/404" element={<Page404 />} />
           </Routes>
           <Footer />
         </div>
