@@ -1,12 +1,13 @@
 import Button from "../Button/Button";
+import Pages from "../Pages/Pages";
 import "./ProtectedPage.css";
 
 export default function protectedPage() {
   return (
     <div className="metaportal_fn_protected">
       <div className="container">
-        <div className="message_holder">
-          <span className="icon">
+        <Pages
+          icon={
             <svg
               xmlns="http://www.w3.org/2000/svg"
               version="1.0"
@@ -38,22 +39,12 @@ export default function protectedPage() {
                 <path d="M1685 2157 c-152 -51 -251 -164 -276 -318 -19 -118 21 -241 107 -324 l44 -43 0 -179 c0 -158 3 -183 21 -223 42 -92 107 -134 209 -134 102 0 167 42 209 134 18 40 21 65 21 223 l0 179 44 43 c189 183 129 505 -114 619 -51 24 -80 30 -145 33 -48 2 -96 -2 -120 -10z"></path>
               </g>
             </svg>
-          </span>
-          <h3
-            className="fn__maintitle"
-            data-text="Protected Page"
-            data-align="center"
-          >
-            Protected Page
-          </h3>
-          <p>Please, enter the password to have access to this page.</p>
-          <div className="container-custom">
-            <form>
-              <input name="post_password" type="password" />
-              <Button text="Authenticate" />
-            </form>
-          </div>
-        </div>
+          }
+          title="Protected Page"
+          text="Please, enter the password to have access to this page."
+          inputType="password"
+          btnText={<Button text="Authenticate" />}
+        />
       </div>
     </div>
   );

@@ -259,7 +259,7 @@ export default function LeftSidebar() {
                     </Link>
                   </li>
                   <li>
-                    <Link href="no-results.html">
+                    <Link to="/NothingFound">
                       <span className="creative_link">Search No Results</span>
                     </Link>
                   </li>

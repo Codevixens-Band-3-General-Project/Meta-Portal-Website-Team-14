@@ -32,7 +32,7 @@ function App() {
               path="/comingSoon"
               element={<ComingSoon date={`${year}-08-21T12:00:00`} />}
             />
-            <Route path="/404" element={<NotFound />} />
+            <Route path="/NothingFound" element={<NotFound />} />
             <Route path="/protected" element={<ProtectedPage />} />
           </Routes>
           <Footer />
