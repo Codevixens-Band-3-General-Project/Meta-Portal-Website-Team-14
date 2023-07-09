@@ -9,6 +9,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Main from "./Main";
 import ComingSoon from "./component/ComingSoon/ComingSoon";
 import NotFound from "./component/NotFound/NotFound.js";
+import ProtectedPage from "./component/ProtectedPage/ProtectedPage";
 
 function App() {
   const [walletConnected, IsConnected] = useState(false);
@@ -32,6 +33,7 @@ function App() {
               element={<ComingSoon date={`${year}-08-21T12:00:00`} />}
             />
             <Route path="/404" element={<NotFound />} />
+            <Route path="/protected" element={<ProtectedPage />} />
           </Routes>
           <Footer />
         </div>

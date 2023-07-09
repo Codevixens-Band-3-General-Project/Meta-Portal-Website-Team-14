@@ -254,7 +254,7 @@ export default function LeftSidebar() {
                     </Link>
                   </li>
                   <li>
-                    <Link href="protected.html">
+                    <Link to="/protected">
                       <span className="creative_link">Protected Page</span>
                     </Link>
                   </li>
