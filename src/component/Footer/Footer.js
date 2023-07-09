@@ -17,7 +17,7 @@ export default function Footer() {
           <div className="right_part">
             <ul>
               <li>
-                <Link className="creative_link" to="/privacy-policy">
+                <Link className="creative_link" to="/privacy">
                   Privacy Policy
                 </Link>
               </li>

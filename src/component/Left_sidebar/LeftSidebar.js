@@ -319,7 +319,7 @@ export default function LeftSidebar() {
                         </Link>
                       </li>
                       <li>
-                        <Link href="privacy-policy.html">
+                        <Link to="/privacy">
                           <span className="creative_link">Privacy Policy</span>
                         </Link>
                       </li>

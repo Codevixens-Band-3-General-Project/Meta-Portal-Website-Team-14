@@ -14,6 +14,7 @@ import Page404 from "./component/Page404/Page404";
 import PageTitle from "./component/PageTitle/PageTitle";
 import SectionDivider from "./component/SectionDivider/SectionDivider";
 import Cookies from "./component/Cookies/Cookies";
+import Privacy from "./component/Privacy/Privacy";
 
 function App() {
   const [walletConnected, IsConnected] = useState(false);
@@ -46,6 +47,16 @@ function App() {
                   <PageTitle title="Cookies" />
                   <SectionDivider />
                   <Cookies />
+                </>
+              }
+            />
+            <Route
+              path="/privacy"
+              element={
+                <>
+                  <PageTitle title="PRIVACY POLICY" />
+                  <SectionDivider />
+                  <Privacy />
                 </>
               }
             />
