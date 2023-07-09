@@ -163,7 +163,7 @@ export default function Contact() {
             >
               <span>
                 {(() => {
-                  if (errors.email && errors.email.type == "pattern") {
+                  if (errors.email && errors.email.type === "pattern") {
                     return "* Invalid Email *";
                   } else if (errors.email || errors.name || errors.message) {
                     return "! Please Fill Required Fields !";

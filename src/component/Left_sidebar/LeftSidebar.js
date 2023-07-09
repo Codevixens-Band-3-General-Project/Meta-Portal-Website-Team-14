@@ -57,9 +57,6 @@ export default function LeftSidebar() {
     transformMore((more) => !more);
   };
 
-  const moreActive = (event) => {
-    transformMore(true);
-  };
   return (
     <Sidebar
       clickHandler={handleClick}
@@ -247,7 +244,7 @@ export default function LeftSidebar() {
                     </Link>
                   </li>
                   <li>
-                    <Link href="coming-soon.html">
+                    <Link to="/comingSoon">
                       <span className="creative_link">Coming Soon</span>
                     </Link>
                   </li>

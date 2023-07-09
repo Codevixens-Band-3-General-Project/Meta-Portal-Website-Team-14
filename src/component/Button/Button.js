@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import "./Button.css";
 
 export default function Button({ text, handleBtnClick, full }) {
