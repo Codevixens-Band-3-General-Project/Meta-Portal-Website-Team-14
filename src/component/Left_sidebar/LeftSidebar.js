@@ -324,7 +324,7 @@ export default function LeftSidebar() {
                         </Link>
                       </li>
                       <li>
-                        <Link href="terms-conditions.html">
+                        <Link to="/terms-conditions">
                           <span className="creative_link">
                             Terms &amp; Conditions
                           </span>

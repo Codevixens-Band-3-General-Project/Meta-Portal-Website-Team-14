@@ -15,6 +15,7 @@ import PageTitle from "./component/PageTitle/PageTitle";
 import SectionDivider from "./component/SectionDivider/SectionDivider";
 import Cookies from "./component/Cookies/Cookies";
 import Privacy from "./component/Privacy/Privacy";
+import Terms_Conditions from "./component/Terms-Conditions/Terms-Conditions";
 
 function App() {
   const [walletConnected, IsConnected] = useState(false);
@@ -57,6 +58,16 @@ function App() {
                   <PageTitle title="PRIVACY POLICY" />
                   <SectionDivider />
                   <Privacy />
+                </>
+              }
+            />
+            <Route
+              path="/terms-conditions"
+              element={
+                <>
+                  <PageTitle title="TERMS & CONDITIONS" />
+                  <SectionDivider />
+                  <Terms_Conditions />
                 </>
               }
             />
