@@ -249,7 +249,7 @@ export default function LeftSidebar() {
                     </Link>
                   </li>
                   <li>
-                    <Link href="404.html">
+                    <Link to="/404">
                       <span className="creative_link">404 Page</span>
                     </Link>
                   </li>

@@ -76,3 +76,40 @@ h5>a:hover,
 h6>a:hover {
     color: var(--mc1)
 }
+
+.uneditable-input,
+input[type=color],
+input[type=date],
+input[type=datetime-local],
+input[type=datetime],
+input[type=email],
+input[type=month],
+input[type=number],
+input[type=password],
+input[type=search],
+input[type=tel],
+input[type=text],
+input[type=time],
+input[type=url],
+input[type=week] {
+    border-radius: 0;
+    font-size: 13px;
+    min-width: 220px;
+    color: #aaa;
+    letter-spacing: .5px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: Heebo, Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    padding: 10px;
+    height: 44px;
+    vertical-align: middle;
+    border: 1px solid #eee;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}

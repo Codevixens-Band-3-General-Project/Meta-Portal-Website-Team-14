@@ -5,10 +5,10 @@ import Context from "./component/context/Context";
 import { useState } from "react";
 import Footer from "./component/Footer/Footer";
 import LeftSidebar from "./component/Left_sidebar/LeftSidebar";
-
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Main from "./Main";
 import ComingSoon from "./component/ComingSoon/ComingSoon";
+import NotFound from "./component/NotFound/NotFound.js";
 
 function App() {
   const [walletConnected, IsConnected] = useState(false);
@@ -31,6 +31,7 @@ function App() {
               path="/comingSoon"
               element={<ComingSoon date={`${year}-08-21T12:00:00`} />}
             />
+            <Route path="/404" element={<NotFound />} />
           </Routes>
           <Footer />
         </div>
