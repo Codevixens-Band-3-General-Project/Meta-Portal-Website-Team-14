@@ -361,17 +361,16 @@ export default function LeftSidebar() {
             <div className="social_icons">
               <ul>
                 <li>
-                  <Link to="#">
-                    {/*                     <svg
+                  <Link to="/">
+                    <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      xmlnsXlink="http://www.w3.org/1999/xlink"
                       version="1.1"
                       id="Capa_1"
                       x="0px"
                       y="0px"
                       viewBox="0 0 512 512"
-                      style="enable-background:new 0 0 512 512;"
-                      xml:space="preserve"
+                      xmlSpace="preserve"
                       className="fn__svg replaced-svg"
                     >
                       <g>
@@ -394,14 +393,14 @@ export default function LeftSidebar() {
                       <g></g>
                       <g></g>
                       <g></g>
-                    </svg> */}
+                    </svg>
                   </Link>
                 </li>
                 <li>
-                  <Link to="#">
-                    {/*                     <svg
+                  <Link to="/">
+                    <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      xmlnsXlink="http://www.w3.org/1999/xlink"
                       version="1.1"
                       id="Capa_1"
                       x="0px"
@@ -409,8 +408,7 @@ export default function LeftSidebar() {
                       width="96.124px"
                       height="96.123px"
                       viewBox="0 0 96.124 96.123"
-                      style="enable-background:new 0 0 96.124 96.123;"
-                      xml:space="preserve"
+                      xmlSpace="preserve"
                       className="fn__svg replaced-svg"
                     >
                       <g>
@@ -431,21 +429,20 @@ export default function LeftSidebar() {
                       <g></g>
                       <g></g>
                       <g></g>
-                    </svg> */}
+                    </svg>
                   </Link>
                 </li>
                 <li>
-                  <Link to="#">
-                    {/*                     <svg
+                  <Link to="/">
+                    <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      xmlnsXlink="http://www.w3.org/1999/xlink"
                       version="1.1"
                       id="Capa_1"
                       x="0px"
                       y="0px"
                       viewBox="0 0 512 512"
-                      style="enable-background:new 0 0 512 512;"
-                      xml:space="preserve"
+                      xmlSpace="preserve"
                       className="fn__svg replaced-svg"
                     >
                       <g>
@@ -478,21 +475,20 @@ export default function LeftSidebar() {
                       <g></g>
                       <g></g>
                       <g></g>
-                    </svg> */}
+                    </svg>
                   </Link>
                 </li>
                 <li>
-                  <Link to="#">
-                    {/*                     <svg
+                  <Link to="/">
+                    <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      xmlnsXlink="http://www.w3.org/1999/xlink"
                       version="1.1"
                       id="Layer_1"
                       x="0px"
                       y="0px"
                       viewBox="0 0 310.05 310.05"
-                      style="enable-background:new 0 0 310.05 310.05;"
-                      xml:space="preserve"
+                      xmlSpace="preserve"
                       className="fn__svg replaced-svg"
                     >
                       <g id="XMLID_798_">
@@ -516,12 +512,12 @@ export default function LeftSidebar() {
                       <g></g>
                       <g></g>
                       <g></g>
-                    </svg> */}
+                    </svg>
                   </Link>
                 </li>
                 <li>
-                  <Link to="#">
-                    {/*                     <svg
+                  <Link to="/">
+                    <svg
                       xmlns="http://www.w3.org/2000/svg"
                       version="1.0"
                       width="512.000000pt"
@@ -538,7 +534,7 @@ export default function LeftSidebar() {
                         <path d="M3270 3820 l0 -190 680 0 680 0 0 190 0 190 -680 0 -680 0 0 -190z"></path>
                         <path d="M3800 3399 c-452 -46 -808 -332 -934 -749 -83 -275 -87 -661 -10 -926 80 -278 218 -450 482 -600 227 -130 541 -189 818 -155 303 38 505 129 684 311 125 126 211 266 239 389 l9 41 -314 0 -314 0 -35 -54 c-63 -99 -162 -164 -293 -192 -266 -56 -546 57 -645 260 -34 69 -67 194 -67 253 l0 43 852 0 851 0 -6 193 c-10 331 -61 524 -192 722 -187 282 -448 429 -830 465 -124 11 -173 11 -295 -1z m291 -503 c142 -31 274 -126 329 -240 32 -66 60 -163 60 -208 l0 -28 -525 0 -525 0 6 28 c17 79 49 171 76 220 41 72 122 154 184 185 103 52 267 70 395 43z"></path>
                       </g>
-                    </svg> */}
+                    </svg>
                   </Link>
                 </li>
               </ul>
