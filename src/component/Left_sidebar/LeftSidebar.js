@@ -314,7 +314,7 @@ export default function LeftSidebar() {
                         </Link>
                       </li>
                       <li>
-                        <Link href="cookies.html">
+                        <Link to="/cookies">
                           <span className="creative_link">Cookies</span>
                         </Link>
                       </li>

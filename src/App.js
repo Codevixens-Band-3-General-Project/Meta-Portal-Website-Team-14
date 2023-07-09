@@ -11,6 +11,9 @@ import ComingSoon from "./component/ComingSoon/ComingSoon";
 import NotFound from "./component/NotFound/NotFound.js";
 import ProtectedPage from "./component/ProtectedPage/ProtectedPage";
 import Page404 from "./component/Page404/Page404";
+import PageTitle from "./component/PageTitle/PageTitle";
+import SectionDivider from "./component/SectionDivider/SectionDivider";
+import Cookies from "./component/Cookies/Cookies";
 
 function App() {
   const [walletConnected, IsConnected] = useState(false);
@@ -36,6 +39,16 @@ function App() {
             <Route path="/NothingFound" element={<NotFound />} />
             <Route path="/protected" element={<ProtectedPage />} />
             <Route path="/404" element={<Page404 />} />
+            <Route
+              path="/cookies"
+              element={
+                <>
+                  <PageTitle title="Cookies" />
+                  <SectionDivider />
+                  <Cookies />
+                </>
+              }
+            />
           </Routes>
           <Footer />
         </div>
