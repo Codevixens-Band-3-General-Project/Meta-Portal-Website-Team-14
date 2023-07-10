@@ -16,7 +16,8 @@ import SectionDivider from "./component/SectionDivider/SectionDivider";
 import Cookies from "./component/Cookies/Cookies";
 import Privacy from "./component/Privacy/Privacy";
 import Terms_Conditions from "./component/Terms-Conditions/Terms-Conditions";
-import Home from "./component/HomeSection/Home";
+import Carousel3D from "./component/3DCarousel/3DCarousel";
+import FunFacts from "./component/FunFacts/FunFacts";
 
 function App() {
   const [walletConnected, IsConnected] = useState(false);
@@ -33,9 +34,19 @@ function App() {
           <WalletSidebar />
           <LeftSidebar />
           <Navbar />
-          <Home />
           <Routes>
-            <Route path="/" element={<Main />} />
+            <Route
+              path="/"
+              element={
+                <Main
+                  carousel={
+                    <>
+                      <Carousel3D /> <FunFacts />
+                    </>
+                  }
+                />
+              }
+            />
             <Route
               path="/comingSoon"
               element={<ComingSoon date={`${year}-08-21T12:00:00`} />}
