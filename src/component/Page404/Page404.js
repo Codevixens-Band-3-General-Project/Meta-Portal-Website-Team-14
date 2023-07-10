@@ -3,16 +3,16 @@ import Pages from "../Pages/Pages";
 
 export default function page404() {
   return (
-    <div class="metaportal_fn_404">
-      <div class="container small">
+    <div className="metaportal_fn_404">
+      <div className="container small">
         <Pages
-          icon={<h3 class="fn__gradient_title">404</h3>}
+          icon={<h3 className="fn__gradient_title">404</h3>}
           title="404 Page Not Found"
           text="            Sorry, but the page you are looking for was moved, removed, renamed
             or might never existed..."
           inputType="text"
           btnText={
-            <Link to="/404" class="metaportal_fn_button">
+            <Link to="/404" className="metaportal_fn_button">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 version="1.0"

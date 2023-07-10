@@ -16,6 +16,7 @@ import SectionDivider from "./component/SectionDivider/SectionDivider";
 import Cookies from "./component/Cookies/Cookies";
 import Privacy from "./component/Privacy/Privacy";
 import Terms_Conditions from "./component/Terms-Conditions/Terms-Conditions";
+import Home from "./component/HomeSection/Home";
 
 function App() {
   const [walletConnected, IsConnected] = useState(false);
@@ -32,6 +33,7 @@ function App() {
           <WalletSidebar />
           <LeftSidebar />
           <Navbar />
+          <Home />
           <Routes>
             <Route path="/" element={<Main />} />
             <Route
