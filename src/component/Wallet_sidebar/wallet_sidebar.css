@@ -1,0 +1,75 @@
+.metaportal_fn_wallet_closer {
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .8);
+    transition: .5s;
+    cursor: pointer;
+    transform: translateX(-102%)
+}y
+
+.metaportal_fn_walletbox .walletbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+}
+
+.metaportal_fn_walletbox {
+    transform: translateX(102%);
+    right: 0;
+    top: 0;
+    background-color: #130f15;
+    z-index: 9999;
+    padding: 100px 40px
+}
+
+.metaportal_fn_walletbox::-webkit-scrollbar {
+    width: 4px
+}
+
+.metaportal_fn_walletbox:-webkit-scrollbar-track {
+    background: #444
+}
+
+.metaportal_fn_walletbox::-webkit-scrollbar-thumb {
+    background-color: var(--mc1)
+}
+
+.metaportal_fn_walletbox .title_holder {
+    text-align: center;
+    margin-bottom: 23px
+}
+
+.metaportal_fn_walletbox .title_holder h3 {
+    margin: 0 0 18px;
+    font-size: 22px;
+    letter-spacing: .5px;
+    text-transform: uppercase
+}
+
+.metaportal_fn_walletbox .title_holder p {
+    margin: 0;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 1.5;
+    color: #888
+}
+
+.metaportal_fn_walletbox {
+    width: 400px;
+    position: fixed;
+    transition: .5s;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #999 #fff;
+    bottom: 0;
+}
+
+@media(max-width: 768px) {
+    .metaportal_fn_walletbox {
+        width: 100%
+    }
+}

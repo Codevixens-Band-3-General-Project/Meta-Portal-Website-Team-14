@@ -1,0 +1,14 @@
+.container-custom {
+    max-width: 565px;
+    width: 100%;
+    margin: 0 auto
+}
+
+.fn__svg {
+    width: 18px;
+    height: 18px;
+    display: block;
+    left: 50%;
+    top: 50%;
+    margin: -9px 0 0 -9px
+}
