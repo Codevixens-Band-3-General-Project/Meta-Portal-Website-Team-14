@@ -18,6 +18,7 @@ import Privacy from "./component/Privacy/Privacy";
 import Terms_Conditions from "./component/Terms-Conditions/Terms-Conditions";
 import Carousel3D from "./component/3DCarousel/3DCarousel";
 import FunFacts from "./component/FunFacts/FunFacts";
+import SimpleCarousel from "./component/SimpleCarousel/SimpleCarousel";
 
 function App() {
   const [walletConnected, IsConnected] = useState(false);
@@ -42,6 +43,18 @@ function App() {
                   carousel={
                     <>
                       <Carousel3D /> <FunFacts />
+                    </>
+                  }
+                />
+              }
+            />
+            <Route
+              path="/simpleCarousel"
+              element={
+                <Main
+                  carousel={
+                    <>
+                      <SimpleCarousel />
                     </>
                   }
                 />

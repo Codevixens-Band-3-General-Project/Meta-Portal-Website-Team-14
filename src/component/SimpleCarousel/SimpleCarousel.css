@@ -1,0 +1,170 @@
+.fn_cs_hero_slidere {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.fn_cs_hero_slider {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    position: relative
+}
+
+.fn_cs_faq .faq_col {
+    width: 33.3333%;
+    padding-left: 60px;
+    margin-bottom: 60px
+}
+
+.fn_cs_hero_slider .item:after{
+    z-index: -1;
+    height: 100%;
+    top: 0;
+    color: var(--mc1);
+    opacity: .15;
+    box-shadow: 0 5px 20px;
+    left: 0;
+    content: ''
+}
+
+#hero4 {
+    position: relative;
+    overflow: hidden
+}
+
+.fn_cs_hero_slider {
+    z-index: 5;
+    padding: 160px 0;
+    display: flex;
+    -ms-align-items: center;
+    align-items: center
+}
+
+.fn_cs_hero_slider .bg_overlay {
+    background-color: rgba(0, 0, 0, .5)
+}
+
+.fn_cs_hero_slider .fn__maintitle,
+.fn_cs_hero_slider p {
+    margin-bottom: 40px
+}
+
+.fn_cs_hero_slider .left_part {
+    width: 480px;
+    max-width: 45%;
+    padding: 0 60px 0 80px;
+    -webkit-flex: none;
+    -moz-flex: none;
+    -ms-flex: none;
+    -o-flex: none;
+    flex: none;
+    position: relative;
+    z-index: 5
+}
+
+.fn_cs_hero_slider .slider_part {
+    width: 100%;
+    position: relative;
+    z-index: 5
+}
+
+.fn_cs_hero_slider .swiper-container {
+    padding: 20px 0 20px 20px
+}
+
+.fn_cs_hero_slider .swiper-slide {
+    width: 450px
+}
+
+.fn_cs_hero_slider .item img {
+    min-width: 100%;
+    margin-bottom: 33%;
+    opacity: 0
+}
+
+.fn_cs_hero_slider .item {
+    position: relative;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, .05);
+    z-index: 2;
+    transition: .3s
+}
+
+.fn_cs_hero_slider .item:after {
+    position: absolute;
+    width: 100%;
+    border-radius: 20px;
+    transition: .3s
+}
+
+.fn_cs_hero_slider .img_holder {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px
+}
+
+.fn_cs_hero_slider .swiper-wrapper {
+    transition-timing-function: ease-out
+}
+
+@media(max-width: 1040px) {
+    .fn_cs_hero_slider {
+        padding: 130px 0;
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        -ms-flex-direction: column;
+        -o-flex-direction: column;
+        flex-direction: column
+    }
+
+    .fn_cs_hero_slider .left_part {
+        width: 100%;
+        max-width: 100%;
+        padding: 20px 20px 40px
+    }
+
+    .fn_cs_hero_slider .swiper-slide {
+        width: 350px
+    }
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.simple .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    width: 500px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.fn_cs_hero_slider{
+    background: url(../../images/bg4.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.particles-js-canvas-el{
+    width: 100%;
+    height: 100%;
+}

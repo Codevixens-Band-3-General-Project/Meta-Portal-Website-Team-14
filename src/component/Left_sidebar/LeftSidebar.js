@@ -150,7 +150,7 @@ export default function LeftSidebar() {
                     </Link>
                   </li>
                   <li>
-                    <Link href="index.html">
+                    <Link to="/">
                       <span className="creative_link">#1 3D Carousel</span>
                     </Link>
                   </li>
@@ -170,7 +170,7 @@ export default function LeftSidebar() {
                     </Link>
                   </li>
                   <li>
-                    <Link href="index-5.html">
+                    <Link to="/simpleCarousel">
                       <span className="creative_link">#5 Simple Carousel</span>
                     </Link>
                   </li>
