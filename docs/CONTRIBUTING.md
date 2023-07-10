@@ -1,6 +1,6 @@
 <!-- omit in toc -->
 
-# Contributing to MetaPortal NFT Portfolio
+# Contributing to MetaPortal NFT Portfolio Web App
 
 ## IMPORTANT!!! : OPEN YOUR PULL REQUESTS ON `dev` BRANCH, NOT `main`
 
