@@ -1,12 +1,17 @@
-import { Link } from "react-router-dom";
-import { useState, useContext, useEffect } from "react";
+/* eslint-disable react/prop-types */
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+import React, { useState, useContext, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import logo from "../../images/logo.png";
 import "./Navbar.css";
 import Button from "../Button/Button";
 import Context from "../context/Context";
 import CircleBtn from "../CircleButton/CircleButton";
 
-export default function Navbar() {
+const Navbar = ({ scrollToSection, homeRef }) => {
+  const location = useLocation();
+
   const [isShown, setIsShown] = useState(false);
   const { IsConnected } = useContext(Context);
   const { leftSidebar, IsOpen } = useContext(Context);
@@ -15,21 +20,29 @@ export default function Navbar() {
   useEffect(() => {
     if (typeof window !== "undefined") {
       window.addEventListener("scroll", () =>
-        seteffect(window.pageYOffset > 10)
+        seteffect(window.pageYOffset > 10),
       );
     }
   }, []);
 
-  const handleClick = (event) => {
+  const handleClick = () => {
     setIsShown((current) => !current);
   };
 
-  const ConnectToWallet = (event) => {
+  const ConnectToWallet = () => {
     IsConnected(true);
   };
 
-  const OpenSidebar = (event) => {
-    IsOpen((leftSidebar) => !leftSidebar);
+  const OpenSidebar = () => {
+    IsOpen(!leftSidebar);
+  };
+
+  const handleScrollToSectionClick = (sectionId) => {
+    if (location.pathname !== "/") {
+      window.location.href = `/`;
+    } else {
+      scrollToSection(sectionId);
+    }
   };
 
   return (
@@ -69,31 +82,53 @@ export default function Navbar() {
         </div>
         <div className={isShown ? "mob_bot active" : "mob_bot"}>
           <ul>
-            <li>
-              <Link className="creative_link" to="/">
+            <ul>
+              <li
+                onClick={() => handleScrollToSectionClick("home")}
+                className={
+                  location.pathname === "/"
+                    ? "creative_link active"
+                    : "creative_link"
+                }>
                 Home
-              </Link>
-            </li>
-            <li>
-              <Link className="creative_link" to="/about">
+              </li>
+              <li
+                onClick={() => handleScrollToSectionClick("about")}
+                className={
+                  location.pathname === "/"
+                    ? "creative_link"
+                    : "creative_link active"
+                }>
                 About
-              </Link>
-            </li>
-            <li>
-              <Link className="creative_link" to="/collection">
+              </li>
+              <li
+                onClick={() => handleScrollToSectionClick("collection")}
+                className={
+                  location.pathname === "/"
+                    ? "creative_link"
+                    : "creative_link active"
+                }>
                 Collection
-              </Link>
-            </li>
-            <li>
-              <Link className="creative_link" to="/news">
+              </li>
+              <li
+                onClick={() => handleScrollToSectionClick("blog")}
+                className={
+                  location.pathname === "/"
+                    ? "creative_link"
+                    : "creative_link active"
+                }>
                 Blog
-              </Link>
-            </li>
-            <li>
-              <Link className="creative_link" to="/contact">
+              </li>
+              <li
+                onClick={() => handleScrollToSectionClick("contact")}
+                className={
+                  location.pathname === "/"
+                    ? "creative_link"
+                    : "creative_link active"
+                }>
                 Contact
-              </Link>
-            </li>
+              </li>
+            </ul>
           </ul>
         </div>
       </div>
@@ -111,30 +146,50 @@ export default function Navbar() {
 
             <div className="nav">
               <ul>
-                <li>
-                  <Link className="creative_link" to="/">
-                    Home
-                  </Link>
+                <li
+                  onClick={() => handleScrollToSectionClick("home")}
+                  className={
+                    location.pathname === "/"
+                      ? "creative_link active"
+                      : "creative_link"
+                  }>
+                  Home
                 </li>
-                <li>
-                  <Link className="creative_link" to="/about">
-                    About
-                  </Link>
+                <li
+                  onClick={() => handleScrollToSectionClick("about")}
+                  className={
+                    location.pathname === "/"
+                      ? "creative_link"
+                      : "creative_link active"
+                  }>
+                  About
                 </li>
-                <li>
-                  <Link className="creative_link" to="/Collection">
-                    Collection
-                  </Link>
+                <li
+                  onClick={() => handleScrollToSectionClick("collection")}
+                  className={
+                    location.pathname === "/"
+                      ? "creative_link"
+                      : "creative_link active"
+                  }>
+                  Collection
                 </li>
-                <li>
-                  <Link className="creative_link" to="/Blog">
-                    Blog
-                  </Link>
+                <li
+                  onClick={() => handleScrollToSectionClick("blog")}
+                  className={
+                    location.pathname === "/"
+                      ? "creative_link"
+                      : "creative_link active"
+                  }>
+                  Blog
                 </li>
-                <li>
-                  <Link className="creative_link" to="/Contact">
-                    Contact
-                  </Link>
+                <li
+                  onClick={() => handleScrollToSectionClick("contact")}
+                  className={
+                    location.pathname === "/"
+                      ? "creative_link"
+                      : "creative_link active"
+                  }>
+                  Contact
                 </li>
               </ul>
             </div>
@@ -150,4 +205,6 @@ export default function Navbar() {
       </header>
     </>
   );
-}
+};
+
+export default Navbar;

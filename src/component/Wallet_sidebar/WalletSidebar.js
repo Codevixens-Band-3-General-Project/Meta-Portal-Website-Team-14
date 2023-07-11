@@ -1,14 +1,14 @@
+import React, { useContext } from "react";
 import WALLETCONNECT from "../../images/walletconnect.png";
 import VENLY from "../../images/venly.png";
 import COINBASE from "../../images/coinbase.png";
 import METAMASK from "../../images/metamask.png";
 import "./wallet_sidebar.css";
-import Cards from "../Sidebar_Crads/Sidebar_Cards";
+import Cards from "../Sidebar_Crads/SidebarCards";
 import Context from "../context/Context";
-import { useContext } from "react";
 import Sidebar from "../Sidebar/Sidebar";
 
-export default function WalletSidebar() {
+const walletSidebar = () => {
   const { walletConnected, IsConnected } = useContext(Context);
 
   const data = [
@@ -30,18 +30,15 @@ export default function WalletSidebar() {
     },
   ];
 
-  const sidebarItems = data.map((element) => {
-    return (
-      <li key={element.name}>
-        <Cards text={element.name} img={element.img} />
-      </li>
-    );
-  });
+  const sidebarItems = data.map((element) => (
+    <li key={element.name}>
+      <Cards text={element.name} img={element.img} />
+    </li>
+  ));
 
   const handleClick = (event) => {
     IsConnected(false);
   };
-
   return (
     <Sidebar
       clickHandler={handleClick}
@@ -65,4 +62,6 @@ export default function WalletSidebar() {
       }
     />
   );
-}
+};
+
+export default walletSidebar;
