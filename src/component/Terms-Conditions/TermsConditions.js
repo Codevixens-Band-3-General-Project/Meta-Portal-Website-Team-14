@@ -2,7 +2,7 @@ import React from "react";
 import data from "./data";
 import QuestionUnderline from "../QuestionUnderline/QuestionUnderline";
 
-const Cookies = () => (
+const TermsConditions = () => (
   <div className="metaportal_fn_privacy">
     <div className="container small">
       {data.map((element) => (
@@ -16,4 +16,4 @@ const Cookies = () => (
   </div>
 );
 
-export default Cookies;
+export default TermsConditions;

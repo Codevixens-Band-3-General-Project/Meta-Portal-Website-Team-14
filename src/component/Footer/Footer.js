@@ -1,7 +1,11 @@
+import React from "react";
 import { Link } from "react-router-dom";
 import "./Footer.css";
 
-export default function Footer() {
+const Footer = () => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
   return (
     <footer id="footer">
       <div className="container">
@@ -9,7 +13,9 @@ export default function Footer() {
           <div className="left_part">
             <p>
               Copyright 2022 — Designed &amp; Developed by
-              <Link to="https://themeforest.net/user/frenify/portfolio">
+              <Link
+                to="https://themeforest.net/user/frenify/portfolio"
+                onClick={scrollToTop}>
                 Frenify
               </Link>
             </p>
@@ -17,17 +23,26 @@ export default function Footer() {
           <div className="right_part">
             <ul>
               <li>
-                <Link className="creative_link" to="/privacy">
+                <Link
+                  className="creative_link"
+                  to="/privacy"
+                  onClick={scrollToTop}>
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link className="creative_link" to="/cookies">
+                <Link
+                  className="creative_link"
+                  to="/cookies"
+                  onClick={scrollToTop}>
                   Cookies
                 </Link>
               </li>
               <li>
-                <Link className="creative_link" to="/terms-conditions">
+                <Link
+                  className="creative_link"
+                  to="/terms-conditions"
+                  onClick={scrollToTop}>
                   Terms &amp; Conditions
                 </Link>
               </li>
@@ -37,4 +52,6 @@ export default function Footer() {
       </div>
     </footer>
   );
-}
+};
+
+export default Footer;
