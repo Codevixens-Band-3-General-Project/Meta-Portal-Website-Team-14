@@ -175,7 +175,7 @@ export default function LeftSidebar() {
                     </Link>
                   </li>
                   <li>
-                    <Link href="index-6.html">
+                    <Link to="/FullScreenSlider">
                       <span className="creative_link">
                         #6 Fullscreen Slider
                       </span>

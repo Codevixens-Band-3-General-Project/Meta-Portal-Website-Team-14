@@ -19,6 +19,7 @@ import Terms_Conditions from "./component/Terms-Conditions/Terms-Conditions";
 import Carousel3D from "./component/3DCarousel/3DCarousel";
 import FunFacts from "./component/FunFacts/FunFacts";
 import SimpleCarousel from "./component/SimpleCarousel/SimpleCarousel";
+import FullScreenSlider from "./component/FullScreenSlider/FullScreenSlider";
 
 function App() {
   const [walletConnected, IsConnected] = useState(false);
@@ -55,6 +56,18 @@ function App() {
                   carousel={
                     <>
                       <SimpleCarousel />
+                    </>
+                  }
+                />
+              }
+            />
+            <Route
+              path="/FullScreenSlider"
+              element={
+                <Main
+                  carousel={
+                    <>
+                      <FullScreenSlider />
                     </>
                   }
                 />

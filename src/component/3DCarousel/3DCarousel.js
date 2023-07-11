@@ -42,7 +42,7 @@ export default function Carousel3D() {
                 disableOnInteraction: false,
               }}
               modules={[Autoplay, EffectCoverflow, Pagination]}
-              className="mySwiper"
+              className="Swiper3d"
               loop={true}
               delay={3000}
             >
