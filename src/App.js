@@ -20,6 +20,7 @@ import Carousel3D from "./component/3DCarousel/3DCarousel";
 import FunFacts from "./component/FunFacts/FunFacts";
 import SimpleCarousel from "./component/SimpleCarousel/SimpleCarousel";
 import FullScreenSlider from "./component/FullScreenSlider/FullScreenSlider";
+import BendedCarousel from "./component/BendedCarousel/BendedCarousel";
 
 function App() {
   const [walletConnected, IsConnected] = useState(false);
@@ -44,6 +45,18 @@ function App() {
                   carousel={
                     <>
                       <Carousel3D /> <FunFacts />
+                    </>
+                  }
+                />
+              }
+            />
+            <Route
+              path="/BendedCarousel"
+              element={
+                <Main
+                  carousel={
+                    <>
+                      <BendedCarousel />
                     </>
                   }
                 />

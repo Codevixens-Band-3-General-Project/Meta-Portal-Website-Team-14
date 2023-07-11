@@ -155,7 +155,7 @@ export default function LeftSidebar() {
                     </Link>
                   </li>
                   <li>
-                    <Link href="index-2.html">
+                    <Link to="/BendedCarousel">
                       <span className="creative_link">#2 Bended Carousel</span>
                     </Link>
                   </li>

@@ -33,6 +33,7 @@ export default function Carousel3D() {
               slidesPerView={"auto"}
               coverflowEffect={{
                 rotate: -20,
+                slideShadows: false,
               }}
               onBeforeInit={(swiper) => {
                 swiperRef.current = swiper;
