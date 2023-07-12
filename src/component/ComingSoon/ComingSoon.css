@@ -1,0 +1,44 @@
+.metaportal_fn_coming_soon .soon_title p {
+    margin: 0
+}
+
+.metaportal_fn_coming_soon {
+    padding: 260px 0
+}
+
+.metaportal_fn_coming_soon .soon_title {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center
+}
+
+.metaportal_fn_coming_soon .soon_title h3 {
+    margin: 0 0 20px
+}
+
+@media(max-width: 1040px) {
+    .fn__gradient_title{
+        font-size: 40px
+    }
+    .metaportal_fn_coming_soon {
+        padding: 130px 0
+    }
+}
+
+.fn__gradient_title {
+    width: fit-content;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 60px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 1;
+    background: -moz-linear-gradient(90deg, var(--mc1), var(--mc2));
+    background: -webkit-linear-gradient(90deg, var(--mc1), var(--mc2));
+    background: linear-gradient(to right, var(--mc1), var(--mc2));
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 4px transparent;
+    color: #160f1a;
+    filter: drop-shadow(0 5px 20px rgba(204, 0, 255, .15))
+}

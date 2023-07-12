@@ -1,0 +1,93 @@
+.metaportal_fn_404 h4 {
+    margin-bottom: 20px
+}
+
+.metaportal_fn_404 {
+    padding: 250px 0
+}
+
+.metaportal_fn_404 .icon .fn__svg {
+    width: 146px;
+    height: 146px;
+    display: block
+}
+
+.metaportal_fn_404 form {
+    display: flex;
+    justify-content: space-between
+}
+
+.metaportal_fn_404 input {
+    width: 100%;
+    margin-right: 10px
+}
+
+.metaportal_fn_404 .icon {
+    display: inline-block;
+    margin-bottom: 37px
+}
+
+.metaportal_fn_404 .message_holder {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: center;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
+    -ms-align-items: center;
+    align-items: center
+}
+
+.metaportal_fn_404 h3 {
+    font-size: 200px;
+    font-weight: 900;
+    color: #1b0e37;
+    letter-spacing: 2px;
+    margin-bottom: 2px
+}
+
+.metaportal_fn_404 p {
+    max-width: 420px;
+    margin: 0 auto 22px
+}
+
+.metaportal_fn_404 a {
+    min-width: 153px
+}
+
+.metaportal_fn_404 a .fn__svg {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    display: block;
+    left: 50%;
+    top: 50%;
+    margin: -9px 0 0 -9px
+}
+
+@media(max-width: 1040px) {
+    .metaportal_fn_404 {
+        padding: 130px 0
+    }
+
+    .metaportal_fn_404 h3 {
+        font-size: 12vw
+    }
+}
+
+.stop1 {
+    stop-color: var(--mc1);
+}
+
+.stop2 {
+    stop-color: var(--mc2);
+}
