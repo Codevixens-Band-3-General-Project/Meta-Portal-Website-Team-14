@@ -20,6 +20,8 @@ import Divider from "./component/SectionDivider/Divider";
 import About from "./component/About";
 import Contact from "./component/ContactSection/Contact";
 import Blog from "./component/Blog";
+import CollectionSection from "./component/Collection/CollectionSection";
+import RoadMap from "./component/RoadMap/RoadMap";
 
 const App = () => {
   const [walletConnected, IsConnected] = useState(false);
@@ -101,6 +103,12 @@ const App = () => {
                   <div ref={blogRef}>
                     <Blog />
                   </div>
+                }
+                collectionSection={
+                    <div ref={collectionRef}>
+                        <CollectionSection />
+                        <RoadMap />
+                    </div>
                 }
               />
             }

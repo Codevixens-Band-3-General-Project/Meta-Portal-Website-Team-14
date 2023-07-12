@@ -5,25 +5,6 @@ import 'slick-carousel/slick/slick-theme.css';
 import './RoadMap.css'
 
 const RoadMap = () => {
-    const [stepWidth, setStepWidth] = useState('100%');
-
-  useEffect(() => {
-    const updateStepWidth = () => {
-      const sliderHolder = document.querySelector('.slider_holder');
-      if (sliderHolder) {
-        const sliderHolderWidth = sliderHolder.offsetWidth;
-        setStepWidth(`${sliderHolderWidth}px`);
-      }
-    };
-
-    updateStepWidth();
-    window.addEventListener('resize', updateStepWidth);
-
-    return () => {
-      window.removeEventListener('resize', updateStepWidth);
-    };
-  }, []);
-
     const cards = [
         {
             id: 1,
@@ -96,7 +77,7 @@ const RoadMap = () => {
                 <h3 className="fn__maintitle big" data-text="RoadMap" data-align="center">RoadMap</h3>
                  <div className="fn_cs_roadmap">
                     <div className="step_holder">
-						<div className="step_in" style={{width: stepWidth}} />
+						<div className="step_in" style={{width: '100%'}} />
 					</div>
                     <div className="slider_holder">
                         <div className="swiper-container swiper-container-horizontal">
