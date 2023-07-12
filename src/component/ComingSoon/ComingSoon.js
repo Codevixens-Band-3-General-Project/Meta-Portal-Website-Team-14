@@ -1,6 +1,11 @@
-import "./ComingSoon.css";
+/* eslint-disable react/prop-types */
+/* eslint-disable react/destructuring-assignment */
+/* eslint-disable no-param-reassign */
+/* eslint-disable class-methods-use-this */
+/* eslint-disable react/no-unused-state */
 import React, { Component } from "react";
 import CountdownCards from "../CountdownCards/CountdownCards";
+import "./ComingSoon.css";
 
 class ComingSoon extends Component {
   constructor(props) {
@@ -31,6 +36,7 @@ class ComingSoon extends Component {
     this.stop();
   }
 
+  // eslint-disable-next-line class-methods-use-this
   calculateCountdown(endDate) {
     let diff = (Date.parse(new Date(endDate)) - Date.parse(new Date())) / 1000;
 
@@ -77,7 +83,7 @@ class ComingSoon extends Component {
   addLeadingZeros(value) {
     value = String(value);
     while (value.length < 2) {
-      value = "0" + value;
+      value = `0${value}`;
     }
     return value;
   }
@@ -100,19 +106,19 @@ class ComingSoon extends Component {
                 <li className="hours">
                   <CountdownCards
                     number={this.addLeadingZeros(countDown.hours)}
-                    duration={"Hours"}
+                    duration="Hours"
                   />
                 </li>
                 <li className="minutes">
                   <CountdownCards
                     number={this.addLeadingZeros(countDown.min)}
-                    duration={"Minutes"}
+                    duration="Minutes"
                   />
                 </li>
                 <li className="seconds">
                   <CountdownCards
                     number={this.addLeadingZeros(countDown.sec)}
-                    duration={"Seconds"}
+                    duration="Seconds"
                   />
                 </li>
               </ul>

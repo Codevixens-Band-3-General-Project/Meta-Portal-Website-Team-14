@@ -1,28 +1,30 @@
+/* eslint-disable react/jsx-boolean-value */
+/* eslint-disable react/jsx-no-constructed-context-values */
 import "./App.css";
-import WalletSidebar from "./component/Wallet_sidebar/wallet_sidebar";
+import { useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import WalletSidebar from "./component/Wallet_sidebar/WalletSidebar";
 import Navbar from "./component/navbar/Navbar";
 import Context from "./component/context/Context";
-import { useState } from "react";
 import Footer from "./component/Footer/Footer";
 import LeftSidebar from "./component/Left_sidebar/LeftSidebar";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Main from "./Main";
 import ComingSoon from "./component/ComingSoon/ComingSoon";
-import NotFound from "./component/NotFound/NotFound.js";
+import NotFound from "./component/NotFound/NotFound";
 import ProtectedPage from "./component/ProtectedPage/ProtectedPage";
 import Page404 from "./component/Page404/Page404";
 import PageTitle from "./component/PageTitle/PageTitle";
 import SectionDivider from "./component/SectionDivider/SectionDivider";
 import Cookies from "./component/Cookies/Cookies";
 import Privacy from "./component/Privacy/Privacy";
-import Terms_Conditions from "./component/Terms-Conditions/Terms-Conditions";
+import TermsConditions from "./component/Terms-Conditions/TermsConditions";
 import Carousel3D from "./component/3DCarousel/3DCarousel";
 import FunFacts from "./component/FunFacts/FunFacts";
 import SimpleCarousel from "./component/SimpleCarousel/SimpleCarousel";
 import FullScreenSlider from "./component/FullScreenSlider/FullScreenSlider";
 import BendedCarousel from "./component/BendedCarousel/BendedCarousel";
 
-function App() {
+const App = () => {
   const [walletConnected, IsConnected] = useState(false);
   const [leftSidebar, IsOpen] = useState(false);
   const currentDate = new Date();
@@ -31,8 +33,7 @@ function App() {
   return (
     <BrowserRouter>
       <Context.Provider
-        value={{ walletConnected, IsConnected, leftSidebar, IsOpen }}
-      >
+        value={{ walletConnected, IsConnected, leftSidebar, IsOpen }}>
         <div className="metaportal_fn_main">
           <WalletSidebar />
           <LeftSidebar />
@@ -55,36 +56,51 @@ function App() {
               element={
                 <Main
                   carousel={
-                    <>
-                      <BendedCarousel />
-                    </>
+                    <BendedCarousel
+                      background={
+                        <div id="space">
+                          <div id="stars-group-1" />
+                          <div id="stars-group-2" />
+                          <div id="stars-group-3" />
+                          <div id="stars-group-4" />
+                          <div id="stars-group-5" />
+                          <div id="stars-group-6" />
+                        </div>
+                      }
+                    />
                   }
                 />
               }
+            />
+            <Route
+              path="/vedioBackground"
+              element={
+                <Main
+                  carousel={
+                    <BendedCarousel
+                      background={
+                        <div id="vedio">
+                          <div id="stars" />
+                          <div id="stars2" />
+                          <div id="stars3" />
+                        </div>
+                      }
+                    />
+                  }
+                />
+              }
+            />
+            <Route
+              path="/waterEffect"
+              element={<Main carousel={<SimpleCarousel water={true} />} />}
             />
             <Route
               path="/simpleCarousel"
-              element={
-                <Main
-                  carousel={
-                    <>
-                      <SimpleCarousel />
-                    </>
-                  }
-                />
-              }
+              element={<Main carousel={<SimpleCarousel water={false} />} />}
             />
             <Route
               path="/FullScreenSlider"
-              element={
-                <Main
-                  carousel={
-                    <>
-                      <FullScreenSlider />
-                    </>
-                  }
-                />
-              }
+              element={<Main carousel={<FullScreenSlider />} />}
             />
             <Route
               path="/comingSoon"
@@ -119,7 +135,7 @@ function App() {
                 <>
                   <PageTitle title="TERMS & CONDITIONS" />
                   <SectionDivider />
-                  <Terms_Conditions />
+                  <TermsConditions />
                 </>
               }
             />
@@ -129,6 +145,6 @@ function App() {
       </Context.Provider>
     </BrowserRouter>
   );
-}
+};
 
 export default App;

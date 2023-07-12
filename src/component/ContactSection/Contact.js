@@ -1,10 +1,13 @@
+/* eslint-disable consistent-return */
+/* eslint-disable jsx-a11y/label-has-associated-control */
+/* eslint-disable react/jsx-props-no-spreading */
 import { Link } from "react-router-dom";
-import "./Contact.css";
-import Button from "../Button/Button";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
+import Button from "../Button/Button";
+import "./Contact.css";
 
-export default function Contact() {
+const Contact = () => {
   const [sent, Send] = useState(false);
 
   const {
@@ -14,7 +17,7 @@ export default function Contact() {
     reset,
   } = useForm();
 
-  const onSubmit = (data) => {
+  const onSubmit = () => {
     reset();
     Send(true);
     setTimeout(() => {
@@ -28,8 +31,7 @@ export default function Contact() {
         <h3
           className="fn__maintitle big"
           data-text="Contact Us"
-          data-align="center"
-        >
+          data-align="center">
           Contact Us
         </h3>
 
@@ -78,8 +80,7 @@ export default function Contact() {
             className="contact_form"
             id="contact_form"
             autoComplete="off"
-            onSubmit={handleSubmit(onSubmit)}
-          >
+            onSubmit={handleSubmit(onSubmit)}>
             <div className="input_list">
               <ul>
                 <li>
@@ -127,7 +128,7 @@ export default function Contact() {
                     {...register("message", {
                       required: true,
                     })}
-                  ></textarea>
+                  />
                 </li>
                 <li className="full">
                   <label className="fn__checkbox">
@@ -139,9 +140,8 @@ export default function Contact() {
                         version="1.1"
                         viewBox="0 0 26 26"
                         enableBackground="new 0 0 26 26"
-                        className="fn__svg replaced-svg"
-                      >
-                        <path d="m.3,14c-0.2-0.2-0.3-0.5-0.3-0.7s0.1-0.5 0.3-0.7l1.4-1.4c0.4-0.4 1-0.4 1.4,0l.1,.1 5.5,5.9c0.2,0.2 0.5,0.2 0.7,0l13.4-13.9h0.1v-8.88178e-16c0.4-0.4 1-0.4 1.4,0l1.4,1.4c0.4,0.4 0.4,1 0,1.4l0,0-16,16.6c-0.2,0.2-0.4,0.3-0.7,0.3-0.3,0-0.5-0.1-0.7-0.3l-7.8-8.4-.2-.3z"></path>
+                        className="fn__svg replaced-svg">
+                        <path d="m.3,14c-0.2-0.2-0.3-0.5-0.3-0.7s0.1-0.5 0.3-0.7l1.4-1.4c0.4-0.4 1-0.4 1.4,0l.1,.1 5.5,5.9c0.2,0.2 0.5,0.2 0.7,0l13.4-13.9h0.1v-8.88178e-16c0.4-0.4 1-0.4 1.4,0l1.4,1.4c0.4,0.4 0.4,1 0,1.4l0,0-16,16.6c-0.2,0.2-0.4,0.3-0.7,0.3-0.3,0-0.5-0.1-0.7-0.3l-7.8-8.4-.2-.3z" />
                       </svg>
                     </span>
                     <p>
@@ -156,11 +156,9 @@ export default function Contact() {
               </ul>
             </div>
             <div
-              className={
-                "empty_notice" +
-                (errors.name || errors.email || errors.message ? " active" : "")
-              }
-            >
+              className={`empty_notice${
+                errors.name || errors.email || errors.message ? " active" : ""
+              }`}>
               <span>
                 {(() => {
                   if (errors.email && errors.email.type === "pattern") {
@@ -173,13 +171,11 @@ export default function Contact() {
             </div>
 
             <div
-              className={
-                "returnmessage" +
-                (!(errors.name || errors.email || errors.message) && sent
+              className={`returnmessage${
+                !(errors.name || errors.email || errors.message) && sent
                   ? " active"
-                  : "")
-              }
-            >
+                  : ""
+              }`}>
               <span>
                 {!(errors.name || errors.email || errors.message) &&
                   "Your message has been received, We will contact you soon."}
@@ -190,4 +186,6 @@ export default function Contact() {
       </div>
     </section>
   );
-}
+};
+
+export default Contact;

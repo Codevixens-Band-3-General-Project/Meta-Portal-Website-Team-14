@@ -1,12 +1,13 @@
+/* eslint-disable no-shadow */
 import { Link } from "react-router-dom";
 import { useState, useContext, useEffect } from "react";
 import logo from "../../images/logo.png";
-import "./Navbar.css";
 import Button from "../Button/Button";
 import Context from "../context/Context";
 import CircleBtn from "../CircleButton/CircleButton";
+import "./Navbar.css";
 
-export default function Navbar() {
+const Navbar = () => {
   const [isShown, setIsShown] = useState(false);
   const { IsConnected } = useContext(Context);
   const { leftSidebar, IsOpen } = useContext(Context);
@@ -15,20 +16,20 @@ export default function Navbar() {
   useEffect(() => {
     if (typeof window !== "undefined") {
       window.addEventListener("scroll", () =>
-        seteffect(window.pageYOffset > 10)
+        seteffect(window.pageYOffset > 10),
       );
     }
   }, []);
 
-  const handleClick = (event) => {
+  const handleClick = () => {
     setIsShown((current) => !current);
   };
 
-  const ConnectToWallet = (event) => {
+  const ConnectToWallet = () => {
     IsConnected(true);
   };
 
-  const OpenSidebar = (event) => {
+  const OpenSidebar = () => {
     IsOpen((leftSidebar) => !leftSidebar);
   };
 
@@ -150,4 +151,6 @@ export default function Navbar() {
       </header>
     </>
   );
-}
+};
+
+export default Navbar;

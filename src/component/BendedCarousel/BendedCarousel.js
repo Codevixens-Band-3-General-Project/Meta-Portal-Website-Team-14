@@ -1,4 +1,6 @@
-// Import Swiper React components
+/* eslint-disable react/prop-types */
+/* eslint-disable import/no-unresolved */
+import { EffectCards, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import img1 from "../../images/1.jpg";
 import img2 from "../../images/2.jpg";
@@ -7,18 +9,30 @@ import img4 from "../../images/4.jpg";
 import img5 from "../../images/5.jpg";
 import img6 from "../../images/6.jpg";
 import img7 from "../../images/7.jpg";
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/effect-cards";
-import { EffectCards, Autoplay } from "swiper/modules";
 import "./BendedCarousel.css";
 
-export default function BendedCarousel() {
+const BendedCarousel = ({ background }) => {
+  const imgs = [
+    { id: "1", img: img1 },
+    { id: "2", img: img2 },
+    { id: "3", img: img3 },
+    { id: "4", img: img4 },
+    { id: "5", img: img5 },
+    { id: "6", img: img6 },
+    { id: "7", img: img7 },
+  ];
+
+  const data = imgs.map((element) => (
+    <SwiperSlide key={element.id}>
+      <img src={element.img} alt="" />
+    </SwiperSlide>
+  ));
+
   return (
     <section id="home2">
-      <div className="canvas_bg">
-        <canvas id="space" height="926.156" width="866"></canvas>
-      </div>
+      {background}
 
       <div className="container">
         <h3 className="fn__maintitle big">Meta Legends</h3>
@@ -36,12 +50,11 @@ export default function BendedCarousel() {
       <div
         className="frenify_cards_gallery"
         data-initial-width="540"
-        data-ratio="0.925"
-      >
+        data-ratio="0.925">
         <Swiper
-          effect={"cards"}
-          centeredSlides={true}
-          slidesPerView={"auto"}
+          effect="cards"
+          centeredSlides
+          slidesPerView="auto"
           cardsEffect={{
             perSlideRotate: 30,
             rotate: true,
@@ -52,36 +65,17 @@ export default function BendedCarousel() {
           }}
           grabCursor={false}
           modules={[EffectCards, Autoplay]}
-          loop={true}
+          loop
           autoplay={{
             delay: 2500,
             disableOnInteraction: false,
           }}
-          className="bendedSwiper"
-        >
-          <SwiperSlide>
-            <img src={img1} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={img2} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={img3} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={img4} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={img5} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={img6} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src={img7} />
-          </SwiperSlide>
+          className="bendedSwiper">
+          {data}
         </Swiper>
       </div>
     </section>
   );
-}
+};
+
+export default BendedCarousel;

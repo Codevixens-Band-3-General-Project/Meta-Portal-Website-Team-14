@@ -1,12 +1,14 @@
+/* eslint-disable react/prop-types */
+
 import Contact from "./component/ContactSection/Contact";
 import SectionDivider from "./component/SectionDivider/SectionDivider";
 
-export default function Main({ carousel }) {
-  return (
-    <>
-      {carousel}
-      <SectionDivider />
-      <Contact />
-    </>
-  );
-}
+const Main = ({ carousel }) => (
+  <>
+    {carousel}
+    <SectionDivider />
+    <Contact />
+  </>
+);
+
+export default Main;

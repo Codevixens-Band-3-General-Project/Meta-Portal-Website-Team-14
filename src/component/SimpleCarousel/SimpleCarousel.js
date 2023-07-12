@@ -1,4 +1,12 @@
-import "./SimpleCarousel.css";
+/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable react/prop-types */
+/* eslint-disable import/no-unresolved */
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import { useEffect } from "react";
+import $ from "jquery";
+import "jquery.ripples";
+import Button from "../Button/Button";
 import img1 from "../../images/1.jpg";
 import img2 from "../../images/2.jpg";
 import img3 from "../../images/3.jpg";
@@ -6,19 +14,41 @@ import img4 from "../../images/4.jpg";
 import img5 from "../../images/5.jpg";
 import img6 from "../../images/6.jpg";
 import img7 from "../../images/7.jpg";
-// Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
-
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/autoplay";
-import Button from "../Button/Button";
+import "./SimpleCarousel.css";
 
-export default function SimpleCarousel() {
+const SimpleCarousel = ({ water }) => {
+  useEffect(() => {
+    $(".water").ripples({
+      resolution: 256,
+      perturbance: 0.01,
+    });
+
+    return () => {
+      // Cleanup the ripples effect when the component is unmounted
+      $(".water").ripples("destroy");
+    };
+  }, []);
+
+  const imgs = [
+    { id: "1", img: img1 },
+    { id: "2", img: img2 },
+    { id: "3", img: img3 },
+    { id: "4", img: img4 },
+    { id: "5", img: img5 },
+    { id: "6", img: img6 },
+    { id: "7", img: img7 },
+  ];
+
+  const data = imgs.map((element) => (
+    <SwiperSlide key={element.id}>
+      <img src={element.img} alt="" />
+    </SwiperSlide>
+  ));
   return (
     <section id="hero4">
-      <div className="fn_cs_hero_slider">
+      <div className={water ? "fn_cs_hero_slider water" : "fn_cs_hero_slider"}>
         <div className="left_part">
           <h3 className="fn__maintitle big" data-text="Meta Legends">
             Meta Legends
@@ -36,37 +66,16 @@ export default function SimpleCarousel() {
             <div className="swiper-wrapper">
               <Swiper
                 slidesPerView={4}
-                centeredSlides={true}
-                grabCursor={true}
-                loop={true}
+                centeredSlides
+                grabCursor
+                loop
                 autoplay={{
                   delay: 2500,
                   disableOnInteraction: false,
                 }}
                 modules={[Autoplay]}
-                className="simple"
-              >
-                <SwiperSlide>
-                  <img src={img1} />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <img src={img2} />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <img src={img3} />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <img src={img4} />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <img src={img5} />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <img src={img6} />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <img src={img7} />
-                </SwiperSlide>
+                className="simple">
+                {data}
               </Swiper>
             </div>
           </div>
@@ -74,4 +83,6 @@ export default function SimpleCarousel() {
       </div>
     </section>
   );
-}
+};
+
+export default SimpleCarousel;
