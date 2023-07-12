@@ -1,10 +1,12 @@
 import "./App.css";
-import HomeSection from "./component/HomeSection";
+import RoadMap from "./component/RoadMap/RoadMap";
+import CollectionSection from "./component/Collection/CollectionSection";
 
 const App = () =>
     <>
         <div>MetaPortal NFT Portfolio web App</div>
-        <HomeSection />
+        <CollectionSection />
+        <RoadMap />
     </>;
 
 export default App;

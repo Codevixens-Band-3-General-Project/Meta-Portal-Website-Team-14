@@ -1,0 +1,124 @@
+:root {
+    --mc1: #cc00ff;
+    --mc2: #7000ff;
+    --hc: #ddd;
+    --bc: #9ba0b8;
+    --hff: 'Heebo',sans-serif;
+    --bff: 'Nunito',sans-serif;
+}
+
+.metaportal_fn_main,
+.metaportal_fn_main * {
+    box-sizing: border-box
+}
+
+.metaportal_fn_main {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
+    min-height: 100vh
+}
+
+.container {
+    width: 100%;
+    max-width: 1800px;
+    padding: 0 100px;
+    margin: 0 auto
+}
+
+.container:after {
+    display: table;
+    content: '';
+    clear: both
+}
+
+@media(max-width: 1200px) {
+    .container {
+        padding: 0 40px
+    }
+}
+
+@media(max-width: 1040px) {
+    .container {
+        padding: 0 20px
+    }
+}
+
+@media(max-width: 480px) {
+    .container {
+        padding: 0 10px
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--hc);
+    font-family: var(--hff);
+    line-height: 1.22;
+    letter-spacing: 0
+}
+
+h1>a,
+h2>a,
+h3>a,
+h4>a,
+h5>a,
+h6>a {
+    text-decoration: none;
+    color: var(--hc)
+}
+
+h1>a:hover,
+h2>a:hover,
+h3>a:hover,
+h4>a:hover,
+h5>a:hover,
+h6>a:hover {
+    color: var(--mc1)
+}
+
+.uneditable-input,
+input[type=color],
+input[type=date],
+input[type=datetime-local],
+input[type=datetime],
+input[type=email],
+input[type=month],
+input[type=number],
+input[type=password],
+input[type=search],
+input[type=tel],
+input[type=text],
+input[type=time],
+input[type=url],
+input[type=week] {
+    border-radius: 0;
+    font-size: 13px;
+    min-width: 220px;
+    color: #aaa;
+    letter-spacing: .5px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: Heebo, Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    padding: 10px;
+    height: 44px;
+    vertical-align: middle;
+    border: 1px solid #eee;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+}
