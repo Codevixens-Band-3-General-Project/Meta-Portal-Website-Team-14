@@ -15,7 +15,7 @@ import SectionDivider from "./component/SectionDivider/SectionDivider";
 import Cookies from "./component/Cookies/Cookies";
 import TermsConditions from "./component/Terms-Conditions/TermsConditions";
 import LandingPage from "./pages/LandingPage";
-import Privacy from "./component/privacy/Privacy";
+import Privacy from "./component/Privacy/Privacy";
 import Divider from "./component/SectionDivider/Divider";
 import About from "./component/About";
 import Contact from "./component/ContactSection/Contact";
