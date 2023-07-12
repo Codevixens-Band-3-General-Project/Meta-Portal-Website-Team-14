@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-import React from "react";
 import SearchBox from "../SearchBox/SearchBox";
 
 const Pages = ({ icon, title, text, inputType, btnText }) => (
@@ -10,5 +9,4 @@ const Pages = ({ icon, title, text, inputType, btnText }) => (
     <SearchBox type={inputType} content={btnText} />
   </div>
 );
-
 export default Pages;

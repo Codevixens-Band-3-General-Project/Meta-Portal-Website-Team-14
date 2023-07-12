@@ -1,11 +1,12 @@
-import React, { useContext, useState } from "react";
+/* eslint-disable no-shadow */
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import Sidebar from "../Sidebar/Sidebar";
 import Context from "../context/Context";
 import OPENSEA from "../../images/opensea.png";
 import DISCORD from "../../images/discord.png";
 import "./LeftSidebar.css";
-import Cards from "../Sidebar_Crads/SidebarCards";
+import SidebarCards from "../Sidebar_Cards/SidebarCards";
 
 const LeftSidebar = () => {
   const { leftSidebar, IsOpen } = useContext(Context);
@@ -40,19 +41,19 @@ const LeftSidebar = () => {
 
   const sidebarItems = data.map((element) => (
     <li key={element.name}>
-      <Cards text={element.name} img={element.img} />
+      <SidebarCards text={element.name} img={element.img} />
     </li>
   ));
 
-  const homeClicked = (event) => {
-    transformHome((prevHome) => !home);
+  const homeClicked = () => {
+    transformHome((home) => !home);
   };
 
-  const pagesClicked = (event) => {
-    transformPages((prevPages) => !pages);
+  const pagesClicked = () => {
+    transformPages((pages) => !pages);
   };
-  const moreClicked = (event) => {
-    transformMore((prevMore) => !more);
+  const moreClicked = () => {
+    transformMore((more) => !more);
   };
 
   return (
@@ -140,32 +141,32 @@ const LeftSidebar = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link href="index.html">
+                    <Link to="/">
                       <span className="creative_link">#1 3D Carousel</span>
                     </Link>
                   </li>
                   <li>
-                    <Link href="index-2.html">
+                    <Link to="/BendedCarousel">
                       <span className="creative_link">#2 Bended Carousel</span>
                     </Link>
                   </li>
                   <li>
-                    <Link href="index-3.html">
+                    <Link to="/vedioBackground">
                       <span className="creative_link">#3 Video Background</span>
                     </Link>
                   </li>
                   <li>
-                    <Link href="index-4.html">
+                    <Link to="/waterEffect">
                       <span className="creative_link">#4 Water Effect</span>
                     </Link>
                   </li>
                   <li>
-                    <Link href="index-5.html">
+                    <Link to="/simpleCarousel">
                       <span className="creative_link">#5 Simple Carousel</span>
                     </Link>
                   </li>
                   <li>
-                    <Link href="index-6.html">
+                    <Link to="/FullScreenSlider">
                       <span className="creative_link">
                         #6 Fullscreen Slider
                       </span>

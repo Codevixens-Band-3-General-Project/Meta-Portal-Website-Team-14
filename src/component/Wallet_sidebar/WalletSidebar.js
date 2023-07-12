@@ -4,7 +4,7 @@ import VENLY from "../../images/venly.png";
 import COINBASE from "../../images/coinbase.png";
 import METAMASK from "../../images/metamask.png";
 import "./wallet_sidebar.css";
-import Cards from "../Sidebar_Crads/SidebarCards";
+import WalletItems from "../Wallet_Items/WalletItems";
 import Context from "../context/Context";
 import Sidebar from "../Sidebar/Sidebar";
 
@@ -32,11 +32,11 @@ const walletSidebar = () => {
 
   const sidebarItems = data.map((element) => (
     <li key={element.name}>
-      <Cards text={element.name} img={element.img} />
+      <WalletItems text={element.name} img={element.img} />
     </li>
   ));
 
-  const handleClick = (event) => {
+  const handleClick = () => {
     IsConnected(false);
   };
   return (

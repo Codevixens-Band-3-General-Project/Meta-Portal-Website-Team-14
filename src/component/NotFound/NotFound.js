@@ -1,9 +1,8 @@
-import React from "react";
 import { Link } from "react-router-dom";
-import "./NotFound.css";
 import Pages from "../Pages/Pages";
+import "./NotFound.css";
 
-const NotFound = () => {
+const NotFound = () => (
   <div className="metaportal_fn_404">
     <div className="container small">
       <Pages
@@ -64,7 +63,7 @@ const NotFound = () => {
         }
       />
     </div>
-  </div>;
-};
+  </div>
+);
 
 export default NotFound;
