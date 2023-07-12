@@ -1,10 +1,12 @@
+/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable consistent-return */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable react/jsx-props-no-spreading */
-import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "./Contact.css";
 import { useForm } from "react-hook-form";
+import { useState } from "react";
 import Button from "../Button/Button";
+import "./Contact.css";
 
 const Contact = () => {
   const [sent, Send] = useState(false);
@@ -16,13 +18,14 @@ const Contact = () => {
     reset,
   } = useForm();
 
-  const onSubmit = (data) => {
+  const onSubmit = () => {
     reset();
     Send(true);
     setTimeout(() => {
       Send(false);
     }, 2000);
   };
+
   return (
     <section id="contact">
       <div className="container">
@@ -163,8 +166,6 @@ const Contact = () => {
                     return "* Invalid Email *";
                   } else if (errors.email || errors.name || errors.message) {
                     return "! Please Fill Required Fields !";
-                  } else {
-                    return null; // Add a default return value if none of the conditions are met
                   }
                 })()}
               </span>

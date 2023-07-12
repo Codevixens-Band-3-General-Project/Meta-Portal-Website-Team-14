@@ -1,17 +1,13 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-import React, { useState, useContext, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+/* eslint-disable no-shadow */
+import { Link } from "react-router-dom";
+import { useState, useContext, useEffect } from "react";
 import logo from "../../images/logo.png";
-import "./Navbar.css";
 import Button from "../Button/Button";
 import Context from "../context/Context";
 import CircleBtn from "../CircleButton/CircleButton";
+import "./Navbar.css";
 
-const Navbar = ({ scrollToSection, homeRef }) => {
-  const location = useLocation();
-
+const Navbar = () => {
   const [isShown, setIsShown] = useState(false);
   const { IsConnected } = useContext(Context);
   const { leftSidebar, IsOpen } = useContext(Context);
@@ -34,15 +30,7 @@ const Navbar = ({ scrollToSection, homeRef }) => {
   };
 
   const OpenSidebar = () => {
-    IsOpen(!leftSidebar);
-  };
-
-  const handleScrollToSectionClick = (sectionId) => {
-    if (location.pathname !== "/") {
-      window.location.href = `/`;
-    } else {
-      scrollToSection(sectionId);
-    }
+    IsOpen((leftSidebar) => !leftSidebar);
   };
 
   return (
@@ -82,53 +70,31 @@ const Navbar = ({ scrollToSection, homeRef }) => {
         </div>
         <div className={isShown ? "mob_bot active" : "mob_bot"}>
           <ul>
-            <ul>
-              <li
-                onClick={() => handleScrollToSectionClick("home")}
-                className={
-                  location.pathname === "/"
-                    ? "creative_link active"
-                    : "creative_link"
-                }>
+            <li>
+              <Link className="creative_link" to="/">
                 Home
-              </li>
-              <li
-                onClick={() => handleScrollToSectionClick("about")}
-                className={
-                  location.pathname === "/"
-                    ? "creative_link"
-                    : "creative_link active"
-                }>
+              </Link>
+            </li>
+            <li>
+              <Link className="creative_link" to="/about">
                 About
-              </li>
-              <li
-                onClick={() => handleScrollToSectionClick("collection")}
-                className={
-                  location.pathname === "/"
-                    ? "creative_link"
-                    : "creative_link active"
-                }>
+              </Link>
+            </li>
+            <li>
+              <Link className="creative_link" to="/collection">
                 Collection
-              </li>
-              <li
-                onClick={() => handleScrollToSectionClick("blog")}
-                className={
-                  location.pathname === "/"
-                    ? "creative_link"
-                    : "creative_link active"
-                }>
+              </Link>
+            </li>
+            <li>
+              <Link className="creative_link" to="/news">
                 Blog
-              </li>
-              <li
-                onClick={() => handleScrollToSectionClick("contact")}
-                className={
-                  location.pathname === "/"
-                    ? "creative_link"
-                    : "creative_link active"
-                }>
+              </Link>
+            </li>
+            <li>
+              <Link className="creative_link" to="/contact">
                 Contact
-              </li>
-            </ul>
+              </Link>
+            </li>
           </ul>
         </div>
       </div>
@@ -146,50 +112,30 @@ const Navbar = ({ scrollToSection, homeRef }) => {
 
             <div className="nav">
               <ul>
-                <li
-                  onClick={() => handleScrollToSectionClick("home")}
-                  className={
-                    location.pathname === "/"
-                      ? "creative_link active"
-                      : "creative_link"
-                  }>
-                  Home
+                <li>
+                  <Link className="creative_link" to="/">
+                    Home
+                  </Link>
                 </li>
-                <li
-                  onClick={() => handleScrollToSectionClick("about")}
-                  className={
-                    location.pathname === "/"
-                      ? "creative_link"
-                      : "creative_link active"
-                  }>
-                  About
+                <li>
+                  <Link className="creative_link" to="/about">
+                    About
+                  </Link>
                 </li>
-                <li
-                  onClick={() => handleScrollToSectionClick("collection")}
-                  className={
-                    location.pathname === "/"
-                      ? "creative_link"
-                      : "creative_link active"
-                  }>
-                  Collection
+                <li>
+                  <Link className="creative_link" to="/Collection">
+                    Collection
+                  </Link>
                 </li>
-                <li
-                  onClick={() => handleScrollToSectionClick("blog")}
-                  className={
-                    location.pathname === "/"
-                      ? "creative_link"
-                      : "creative_link active"
-                  }>
-                  Blog
+                <li>
+                  <Link className="creative_link" to="/Blog">
+                    Blog
+                  </Link>
                 </li>
-                <li
-                  onClick={() => handleScrollToSectionClick("contact")}
-                  className={
-                    location.pathname === "/"
-                      ? "creative_link"
-                      : "creative_link active"
-                  }>
-                  Contact
+                <li>
+                  <Link className="creative_link" to="/Contact">
+                    Contact
+                  </Link>
                 </li>
               </ul>
             </div>

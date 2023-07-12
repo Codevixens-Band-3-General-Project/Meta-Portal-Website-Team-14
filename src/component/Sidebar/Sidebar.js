@@ -1,10 +1,10 @@
-/* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
-import React from "react";
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
 import "./Sidebar.css";
 
-const Sidebar = ({ clickHandler, active, _closer, _className, content }) => {
+const Sidebar = ({ clickHandler, active, _closer, _className, content }) => (
   <>
     <div
       onClick={clickHandler}
@@ -16,7 +16,7 @@ const Sidebar = ({ clickHandler, active, _closer, _className, content }) => {
       </Link>
       {content}
     </div>
-  </>;
-};
+  </>
+);
 
 export default Sidebar;

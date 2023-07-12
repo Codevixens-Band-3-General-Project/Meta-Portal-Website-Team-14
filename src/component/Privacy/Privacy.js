@@ -1,26 +1,22 @@
-import React from "react";
+import QuestionUnderline from "../QuestionUnderline/QuestionUnderline";
 import data from "./data";
-import PageTitle from "../PageTitle/PageTitle";
 
-const Privacy = () => (
-  <div>
+const Privacy = () => {
+  const Items = data.map((element) => (
+    <QuestionUnderline
+      key={element.question}
+      Question={element.question}
+      p={element.text.map((p) => (
+        <p key={p}>{p}</p>
+      ))}
+    />
+  ));
+
+  return (
     <div className="metaportal_fn_privacy">
-      <div className="container small">
-        {data.map((element) => (
-          <>
-            <h3 className="fn__maintitle">{element.question} </h3>
-            <div className="fn_cs_divider">
-              <div className="divider">
-                <span />
-                <span />
-              </div>
-            </div>
-            {element.text}
-          </>
-        ))}
-      </div>
+      <div className="container small">{Items}</div>
     </div>
-  </div>
-);
+  );
+};
 
 export default Privacy;

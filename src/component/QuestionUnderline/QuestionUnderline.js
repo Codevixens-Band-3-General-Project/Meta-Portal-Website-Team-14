@@ -1,18 +1,16 @@
 /* eslint-disable react/prop-types */
-import React from "react";
-import "./questionUnderline.css";
+import "./QuestionUnderline.css";
 
-const QuestionUnderline = ({ question, text }) => (
+const QuestionUnderline = ({ Question, p }) => (
   <>
-    <h3 className="fn__maintitle">{question} </h3>
+    <h3 className="fn__maintitle">{Question} </h3>
     <div className="fn_cs_divider">
       <div className="divider">
         <span />
         <span />
       </div>
     </div>
-    {text}
+    {p}
   </>
 );
-
 export default QuestionUnderline;
