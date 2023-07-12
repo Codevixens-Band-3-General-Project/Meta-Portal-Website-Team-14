@@ -31,8 +31,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <Context.Provider
-        value={{ walletConnected, IsConnected, leftSidebar, IsOpen }}
-      >
+        value={{ walletConnected, IsConnected, leftSidebar, IsOpen }}>
         <div className="metaportal_fn_main">
           <WalletSidebar />
           <LeftSidebar />
