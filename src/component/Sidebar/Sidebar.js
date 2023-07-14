@@ -2,7 +2,7 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
-import "./Sidebar.css";
+import "./sidebar.css";
 
 const Sidebar = ({ clickHandler, active, _closer, _className, content }) => (
   <>

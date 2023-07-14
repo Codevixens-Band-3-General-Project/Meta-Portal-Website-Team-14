@@ -1,8 +1,7 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-/* eslint-disable import/no-unresolved */
-import { EffectCoverflow, Pagination, Autoplay } from "swiper/modules";
+import "./home.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Link } from "react-router-dom";
+import { EffectCoverflow, Pagination, Autoplay } from "swiper/modules";
 import { useRef } from "react";
 import img1 from "../../images/1.jpg";
 import img2 from "../../images/2.jpg";
@@ -16,30 +15,12 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
-import "./3DCarousel.css";
-import Button from "../button/Button";
 
-const Carousel3D = () => {
+const Home = () => {
   const swiperRef = useRef();
 
-  const imgs = [
-    { id: "1", img: img1 },
-    { id: "2", img: img2 },
-    { id: "3", img: img3 },
-    { id: "4", img: img4 },
-    { id: "5", img: img5 },
-    { id: "6", img: img6 },
-    { id: "7", img: img7 },
-  ];
-
-  const data = imgs.map((element) => (
-    <SwiperSlide key={element.id}>
-      <img src={element.img} alt="" />
-    </SwiperSlide>
-  ));
-
   return (
-    <section id="home" className="dcarouselCont">
+    <section id="home">
       <div className="container">
         <h3 className="fn__maintitle big">Meta Legends</h3>
 
@@ -51,7 +32,6 @@ const Carousel3D = () => {
               slidesPerView="auto"
               coverflowEffect={{
                 rotate: -20,
-                slideShadows: false,
               }}
               onBeforeInit={(swiper) => {
                 swiperRef.current = swiper;
@@ -61,14 +41,35 @@ const Carousel3D = () => {
                 disableOnInteraction: false,
               }}
               modules={[Autoplay, EffectCoverflow, Pagination]}
-              className="Swiper3d"
+              className="mySwiper"
               loop
               delay={3000}>
-              {data}
+              <SwiperSlide>
+                <img src={img1} alt="" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src={img2} alt="" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src={img3} alt="" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src={img4} alt="" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src={img5} alt="" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src={img6} alt="" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src={img7} alt="" />
+              </SwiperSlide>
             </Swiper>
           </div>
           <div className="slider_nav">
-            <Link
+            <button
+              type="button"
               to=""
               className="prev"
               onClick={() => swiperRef.current?.slidePrev()}>
@@ -90,7 +91,7 @@ const Carousel3D = () => {
                 </svg>
               </span>
               <span className="circle" />
-            </Link>
+            </button>
             <Link
               to=""
               className="next"
@@ -124,11 +125,17 @@ const Carousel3D = () => {
             are stored as ERC-721 tokens on the Ethereum blockchain and hosted
             on IPFS.
           </p>
-          <Button text="BUY ON OPENSEA" />
+          <a
+            href="https://opensea.io/"
+            className="metaportal_fn_button"
+            target="_blank"
+            rel="noreferrer">
+            <span>Buy On Opensea</span>
+          </a>
         </div>
       </div>
     </section>
   );
 };
 
-export default Carousel3D;
+export default Home;
