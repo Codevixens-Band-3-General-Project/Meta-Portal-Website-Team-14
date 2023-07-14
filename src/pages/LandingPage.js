@@ -9,6 +9,7 @@ const LandingPage = ({
   blogSection,
   collectionSection,
   contactSection,
+  roadmapSection,
   carousel,
 }) => {
   const [showScrollButton, setShowScrollButton] = useState(false);
@@ -84,6 +85,7 @@ const LandingPage = ({
       {collectionSection}
       {aboutSection}
       {blogSection}
+      {roadmapSection}
       {contactSection}
 
       {/* <!-- Social --> */}

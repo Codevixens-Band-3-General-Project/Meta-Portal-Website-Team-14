@@ -23,6 +23,7 @@ import Privacy from "./component/Privacy/Privacy";
 import About from "./component/About";
 import Contact from "./component/ContactSection/Contact";
 import Blog from "./component/Blog";
+import RoadMap from "./component/Roadmap/Roadmap";
 
 const Main = () => {
   const currentDate = new Date();
@@ -31,6 +32,7 @@ const Main = () => {
   const homeRef = useRef(null);
   const aboutRef = useRef(null);
   const blogRef = useRef(null);
+  const roadmapRef = useRef(null);
   const contactRef = useRef(null);
   const collectionRef = useRef(null);
 
@@ -44,6 +46,8 @@ const Main = () => {
         return collectionRef;
       case "blog":
         return blogRef;
+      case "roadmap":
+        return roadmapRef;
       case "contact":
         return contactRef;
       default:
@@ -89,6 +93,11 @@ const Main = () => {
               aboutSection={
                 <div ref={aboutRef}>
                   <About />
+                </div>
+              }
+              roadmapSection={
+                <div ref={roadmapRef}>
+                  <RoadMap />
                 </div>
               }
               contactSection={
