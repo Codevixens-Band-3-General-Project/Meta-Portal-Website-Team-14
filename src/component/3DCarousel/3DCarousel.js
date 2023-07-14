@@ -17,7 +17,7 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
 import "./3DCarousel.css";
-import Button from "../button/Button";
+import Button from "../Button/Button";
 
 const Carousel3D = () => {
   const swiperRef = useRef();

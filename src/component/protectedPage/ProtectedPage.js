@@ -1,5 +1,5 @@
-import Button from "../button/Button";
-import Pages from "../pages/Pages";
+import Button from "../Button/Button";
+import Pages from "../Pages/Pages";
 import "./protectedPage.css";
 
 const protectedPage = () => (

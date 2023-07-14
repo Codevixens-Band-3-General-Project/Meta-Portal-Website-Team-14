@@ -1,4 +1,4 @@
-import QuestionUnderline from "../questionUnderline/QuestionUnderline";
+import QuestionUnderline from "../QuestionUnderline/QuestionUnderline";
 import data from "./data";
 import "./cookies.css";
 

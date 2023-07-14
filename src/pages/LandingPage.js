@@ -2,7 +2,7 @@
 /* eslint-disable react/prop-types */
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import SearchDropdown from "../component/searchBox/SearchDropdown";
+import SearchDropdown from "../component/SearchBox/SearchDropdown";
 
 const LandingPage = ({
   aboutSection,

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import BlogImage1 from "../assets/blog1.jpg";
-import SectionDivider from "./sectionDivider/SectionDivider";
+import SectionDivider from "./SectionDivider/SectionDivider";
 
 const Blog = () => (
   <BlogStyles>

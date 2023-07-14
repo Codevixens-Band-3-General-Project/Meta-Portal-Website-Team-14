@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import SearchBox from "../searchBox/SearchBox";
+import SearchBox from "../SearchBox/SearchBox";
 
 const Pages = ({ icon, title, text, inputType, btnText }) => (
   <div className="message_holder">

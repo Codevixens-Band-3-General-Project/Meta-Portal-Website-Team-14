@@ -5,9 +5,9 @@
 import { Link, useLocation } from "react-router-dom";
 import { useState, useContext, useEffect } from "react";
 import logo from "../../images/logo.png";
-import Button from "../button/Button";
+import Button from "../Button/Button";
 import Context from "../context/Context";
-import CircleBtn from "../circleButton/CircleButton";
+import CircleBtn from "../CircleButton/CircleButton";
 import "./navbar.css";
 
 const Navbar = ({ scrollToSection, homeRef }) => {

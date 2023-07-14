@@ -6,7 +6,7 @@ import { Autoplay } from "swiper/modules";
 import { useEffect } from "react";
 import $ from "jquery";
 import "jquery.ripples";
-import Button from "../button/Button";
+import Button from "../Button/Button";
 import img1 from "../../images/1.jpg";
 import img2 from "../../images/2.jpg";
 import img3 from "../../images/3.jpg";
