@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import "./SearchBox.css";
+import "./searchBox.css";
 
 const SearchBox = ({ type, content }) => (
   <div className="container-custom">

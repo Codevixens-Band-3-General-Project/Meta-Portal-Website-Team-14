@@ -1,6 +1,6 @@
 import React from "react";
 import data from "./data";
-import QuestionUnderline from "../QuestionUnderline/QuestionUnderline";
+import QuestionUnderline from "../questionUnderline/QuestionUnderline";
 
 const TermsConditions = () => (
   <div className="metaportal_fn_privacy">

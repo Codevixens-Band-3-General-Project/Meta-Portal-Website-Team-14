@@ -3,8 +3,8 @@ import WALLETCONNECT from "../../images/walletconnect.png";
 import VENLY from "../../images/venly.png";
 import COINBASE from "../../images/coinbase.png";
 import METAMASK from "../../images/metamask.png";
-import "./wallet_sidebar.css";
-import WalletItems from "../Wallet_Items/WalletItems";
+import "./walletSidebar.css";
+import WalletItems from "../walletItems/WalletItems";
 import Context from "../context/Context";
 import Sidebar from "../Sidebar/Sidebar";
 

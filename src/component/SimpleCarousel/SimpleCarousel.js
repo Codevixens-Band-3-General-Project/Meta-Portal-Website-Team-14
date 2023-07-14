@@ -6,7 +6,7 @@ import { Autoplay } from "swiper/modules";
 import { useEffect } from "react";
 import $ from "jquery";
 import "jquery.ripples";
-import Button from "../Button/Button";
+import Button from "../button/Button";
 import img1 from "../../images/1.jpg";
 import img2 from "../../images/2.jpg";
 import img3 from "../../images/3.jpg";
@@ -16,7 +16,7 @@ import img6 from "../../images/6.jpg";
 import img7 from "../../images/7.jpg";
 import "swiper/css";
 import "swiper/css/autoplay";
-import "./SimpleCarousel.css";
+import "./simpleCarousel.css";
 
 const SimpleCarousel = ({ water }) => {
   useEffect(() => {

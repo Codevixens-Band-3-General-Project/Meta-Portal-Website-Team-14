@@ -11,7 +11,7 @@ import img6 from "../../images/6.jpg";
 import img7 from "../../images/7.jpg";
 import "swiper/css";
 import "swiper/css/effect-cards";
-import "./BendedCarousel.css";
+import "./bendedCarousel.css";
 
 const BendedCarousel = ({ background }) => {
   const imgs = [

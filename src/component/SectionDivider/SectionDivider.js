@@ -1,4 +1,4 @@
-import "./SectionDivider.css";
+import "./sectionDivider.css";
 
 const SectionDivider = () => (
   <div className="fn_cs_section_divider">

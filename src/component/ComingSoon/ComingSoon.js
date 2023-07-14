@@ -4,8 +4,8 @@
 /* eslint-disable class-methods-use-this */
 /* eslint-disable react/no-unused-state */
 import React, { Component } from "react";
-import CountdownCards from "../CountdownCards/CountdownCards";
-import "./ComingSoon.css";
+import CountdownCards from "../countdownCards/CountdownCards";
+import "./comingSoon.css";
 
 class ComingSoon extends Component {
   constructor(props) {

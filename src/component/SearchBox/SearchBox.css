@@ -1,14 +1,132 @@
 .container-custom {
-    max-width: 565px;
-    width: 100%;
-    margin: 0 auto
+  max-width: 565px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .fn__svg {
-    width: 18px;
-    height: 18px;
-    display: block;
-    left: 50%;
-    top: 50%;
-    margin: -9px 0 0 -9px
+  width: 18px;
+  height: 18px;
+  display: block;
+  left: 50%;
+  top: 50%;
+  margin: -9px 0 0 -9px;
+}
+
+.metaportal_fn_search_closer.active {
+  transform: translateY(0);
+}
+.metaportal_fn_search_closer {
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: 0.5s;
+  cursor: pointer;
+  transform: translateY(102%);
+}
+.metaportal_fn_searchbox.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.metaportal_fn_searchbox {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-102%);
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background-color: #130f15;
+  padding: 100px 0;
+  transition: 0.5s;
+}
+.container {
+  width: 100%;
+  max-width: 1800px;
+  padding: 0 100px;
+  margin: 0 auto;
+}
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 40px;
+  }
+}
+@media (max-width: 1040px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+.container.small {
+  max-width: 1400px;
+}
+.metaportal_fn_searchbox .searchbox {
+  position: relative;
+}
+.container:after {
+  display: table;
+  content: "";
+  clear: both;
+}
+
+#searchdropdown-input {
+  display: block;
+  width: 100%;
+  border: none;
+  padding: 0 70px 0 30px;
+  height: 120px;
+  border-radius: 0;
+  font-size: 48px;
+  letter-spacing: 0;
+  font-weight: 300;
+  font-family: var(--hff);
+  color: #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+@media (max-width: 1040px) {
+  #searchdropdown-input {
+    font-size: 26px;
+    height: 70px;
+  }
+}
+.metaportal_fn_searchbox a {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -ms-align-items: center;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100px;
+  height: 120px;
+  color: #bbb;
+}
+
+@media (max-width: 1040px) {
+  .metaportal_fn_searchbox a {
+    width: 70px;
+    height: 70px;
+  }
+}
+.metaportal_fn_searchbox a .fn__svg {
+  width: 40px;
+  height: 40px;
+  display: block;
+}
+@media (max-width: 1040px) {
+  .metaportal_fn_searchbox a .fn__svg {
+    width: 26px;
+    height: 26px;
+  }
 }

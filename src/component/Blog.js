@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 import BlogImage1 from "../assets/blog1.jpg";
-import Divider from "./SectionDivider/Divider";
+import SectionDivider from "./sectionDivider/SectionDivider";
 
 const Blog = () => (
   <BlogStyles>
-    <Divider />
+    <SectionDivider />
     <section id="news">
       <div className="container">
         <h3

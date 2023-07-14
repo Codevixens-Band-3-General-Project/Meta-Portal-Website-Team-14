@@ -5,8 +5,8 @@ import Sidebar from "../Sidebar/Sidebar";
 import Context from "../context/Context";
 import OPENSEA from "../../images/opensea.png";
 import DISCORD from "../../images/discord.png";
-import "./LeftSidebar.css";
-import SidebarCards from "../Sidebar_Cards/SidebarCards";
+import "./leftSidebar.css";
+import SidebarCards from "../sidebarCards/SidebarCards";
 
 const LeftSidebar = () => {
   const { leftSidebar, IsOpen } = useContext(Context);
@@ -166,7 +166,7 @@ const LeftSidebar = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link to="/FullScreenSlider">
+                    <Link to="/fullScreenSlider">
                       <span className="creative_link">
                         #6 Fullscreen Slider
                       </span>

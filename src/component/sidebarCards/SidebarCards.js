@@ -1,9 +1,8 @@
 /* eslint-disable react/prop-types */
-import React from "react";
-import "./Wallet_items.css";
 import { Link } from "react-router-dom";
+import "./sidebarCards.css";
 
-const WalletItems = ({ text, img }) => (
+const SidebarCards = ({ text, img }) => (
   <div className="item">
     <Link to="/" />
     <span className="icon">
@@ -13,4 +12,4 @@ const WalletItems = ({ text, img }) => (
   </div>
 );
 
-export default WalletItems;
+export default SidebarCards;
