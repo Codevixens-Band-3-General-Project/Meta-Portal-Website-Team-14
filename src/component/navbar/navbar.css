@@ -25,6 +25,10 @@ a.full_link {
   display: none;
   overflow: hidden;
 }
+.mobile-nav li,
+.nav li {
+  cursor: pointer !important;
+}
 
 .header .trigger_logo,
 .metaportal_fn_mobnav .social,
