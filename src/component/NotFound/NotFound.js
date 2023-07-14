@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import Pages from "../Pages/Pages";
-import "./NotFound.css";
+import Pages from "../pages/Pages";
+import "./notFound.css";
 
 const NotFound = () => (
   <div className="metaportal_fn_404">
@@ -44,7 +44,7 @@ const NotFound = () => (
         text="Sorry, no content matched your criteria. Try searching something else."
         inputType="text"
         btnText={
-          <Link to="/NotFound" className="metaportal_fn_button">
+          <Link to="/notFound" className="metaportal_fn_button">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               version="1.0"

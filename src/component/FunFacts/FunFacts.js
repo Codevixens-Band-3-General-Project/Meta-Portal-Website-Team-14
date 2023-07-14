@@ -1,4 +1,4 @@
-import "./FunFacts.css";
+import "./funFacts.css";
 
 const FunFacts = () => (
   <section id="fun_facts">

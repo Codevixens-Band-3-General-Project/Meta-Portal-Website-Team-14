@@ -1,21 +1,18 @@
-import QuestionUnderline from "../QuestionUnderline/QuestionUnderline";
+import QuestionUnderline from "../questionUnderline/QuestionUnderline";
 import data from "./data";
+import "./cookies.css";
 
-const Cookies = () => {
-  const Items = data.map((element) => (
-    <QuestionUnderline
-      key={element.question}
-      Question={element.question}
-      p={element.text.map((p) => (
-        <p key={p}>{p}</p>
+const Cookies = () => (
+  <div className="metaportal_fn_privacy">
+    <div className="container small">
+      {data.map((element) => (
+        <QuestionUnderline
+          key={element.question}
+          question={element.question}
+          text={element.text}
+        />
       ))}
-    />
-  ));
-
-  return (
-    <div className="metaportal_fn_privacy">
-      <div className="container small">{Items}</div>
     </div>
-  );
-};
+  </div>
+);
 export default Cookies;

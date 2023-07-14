@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import "./CountdownCards.css";
+import "./countdownCards.css";
 
 const CountdownCards = ({ number, duration }) => (
   <div className="item">

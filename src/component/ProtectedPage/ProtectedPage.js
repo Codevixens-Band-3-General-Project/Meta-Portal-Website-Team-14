@@ -1,6 +1,6 @@
-import Button from "../Button/Button";
-import Pages from "../Pages/Pages";
-import "./ProtectedPage.css";
+import Button from "../button/Button";
+import Pages from "../pages/Pages";
+import "./protectedPage.css";
 
 const protectedPage = () => (
   <div className="metaportal_fn_protected">

@@ -17,7 +17,7 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
 import "./3DCarousel.css";
-import Button from "../Button/Button";
+import Button from "../button/Button";
 
 const Carousel3D = () => {
   const swiperRef = useRef();
@@ -39,7 +39,7 @@ const Carousel3D = () => {
   ));
 
   return (
-    <section id="home">
+    <section id="home" className="dcarouselCont">
       <div className="container">
         <h3 className="fn__maintitle big">Meta Legends</h3>
 

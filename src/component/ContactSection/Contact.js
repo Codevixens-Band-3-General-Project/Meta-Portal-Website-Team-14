@@ -4,12 +4,13 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import { useState } from "react";
-import Button from "../Button/Button";
-import "./Contact.css";
+import { useEffect, useState } from "react";
+import Button from "../button/Button";
+import "./contact.css";
 
 const Contact = () => {
   const [sent, Send] = useState(false);
+  const [errorVisible, setErrorVisible] = useState(false);
 
   const {
     register,
@@ -18,13 +19,25 @@ const Contact = () => {
     reset,
   } = useForm();
 
-  const onSubmit = () => {
+  useEffect(() => {
+    setErrorVisible(errors.name || errors.email || errors.message);
+    setTimeout(() => {
+      setErrorVisible(false);
+    }, 2000);
+  }, [errors.name || errors.email || errors.message]);
+
+  const onSubmit = (data) => {
     reset();
     Send(true);
     setTimeout(() => {
       Send(false);
+      setErrorVisible(false);
     }, 2000);
   };
+
+  const handleFormSubmit = handleSubmit((data) => {
+    onSubmit(data);
+  });
 
   return (
     <section id="contact">
@@ -81,7 +94,7 @@ const Contact = () => {
             className="contact_form"
             id="contact_form"
             autoComplete="off"
-            onSubmit={handleSubmit(onSubmit)}>
+            onSubmit={handleFormSubmit}>
             <div className="input_list">
               <ul>
                 <li>
@@ -111,6 +124,8 @@ const Contact = () => {
                   <input
                     id="tel"
                     type="text"
+                    name="tel"
+                    {...register("tel")}
                     placeholder="Your Phone (optional)"
                   />
                 </li>
@@ -118,6 +133,8 @@ const Contact = () => {
                   <input
                     id="subject"
                     type="text"
+                    name="subject"
+                    {...register("subject")}
                     placeholder="Topic (optional)"
                   />
                 </li>
@@ -156,32 +173,23 @@ const Contact = () => {
                 </li>
               </ul>
             </div>
-            <div
-              className={`empty_notice${
-                errors.name || errors.email || errors.message ? " active" : ""
-              }`}>
-              <span>
-                {(() => {
-                  if (errors.email && errors.email.type === "pattern") {
-                    return "* Invalid Email *";
-                  } else if (errors.email || errors.name || errors.message) {
-                    return "! Please Fill Required Fields !";
-                  }
-                })()}
-              </span>
-            </div>
+            {errorVisible && (
+              <div className="empty_notice active">
+                <span>
+                  {errors.email && errors.email.type === "pattern"
+                    ? "* Invalid Email *"
+                    : "! Please Fill Required Fields !"}
+                </span>
+              </div>
+            )}
 
-            <div
-              className={`returnmessage${
-                !(errors.name || errors.email || errors.message) && sent
-                  ? " active"
-                  : ""
-              }`}>
-              <span>
-                {!(errors.name || errors.email || errors.message) &&
-                  "Your message has been received, We will contact you soon."}
-              </span>
-            </div>
+            {sent && (
+              <div className="returnmessage active">
+                <span>
+                  Your message has been received. We will contact you soon.
+                </span>
+              </div>
+            )}
           </form>
         </div>
       </div>

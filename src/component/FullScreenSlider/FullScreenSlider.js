@@ -13,7 +13,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css/autoplay";
-import "./FullScreenSlider.css";
+import "./fullScreenSlider.css";
 
 const FullScreenSlider = () => {
   const swiperRef = useRef();

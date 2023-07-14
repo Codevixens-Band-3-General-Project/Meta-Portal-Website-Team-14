@@ -1,13 +1,16 @@
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable react/prop-types */
 /* eslint-disable no-shadow */
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useState, useContext, useEffect } from "react";
 import logo from "../../images/logo.png";
-import Button from "../Button/Button";
+import Button from "../button/Button";
 import Context from "../context/Context";
-import CircleBtn from "../CircleButton/CircleButton";
-import "./Navbar.css";
+import CircleBtn from "../circleButton/CircleButton";
+import "./navbar.css";
 
-const Navbar = () => {
+const Navbar = ({ scrollToSection, homeRef }) => {
   const [isShown, setIsShown] = useState(false);
   const { IsConnected } = useContext(Context);
   const { leftSidebar, IsOpen } = useContext(Context);
@@ -31,6 +34,24 @@ const Navbar = () => {
 
   const OpenSidebar = () => {
     IsOpen((leftSidebar) => !leftSidebar);
+  };
+
+  const location = useLocation();
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", () =>
+        seteffect(window.pageYOffset > 10),
+      );
+    }
+  }, []);
+
+  const handleScrollToSectionClick = (sectionId) => {
+    if (location.pathname !== "/") {
+      window.location.href = `/`;
+    } else {
+      scrollToSection(sectionId);
+    }
   };
 
   return (
@@ -69,31 +90,51 @@ const Navbar = () => {
           <CircleBtn clickHandler={handleClick} active={isShown} />
         </div>
         <div className={isShown ? "mob_bot active" : "mob_bot"}>
-          <ul>
-            <li>
-              <Link className="creative_link" to="/">
-                Home
-              </Link>
+          <ul className="mobile-nav">
+            <li
+              onClick={() => handleScrollToSectionClick("home")}
+              className={
+                location.pathname === "/"
+                  ? "creative_link active"
+                  : "creative_link"
+              }>
+              Home
             </li>
-            <li>
-              <Link className="creative_link" to="/about">
-                About
-              </Link>
+            <li
+              onClick={() => handleScrollToSectionClick("about")}
+              className={
+                location.pathname === "/"
+                  ? "creative_link"
+                  : "creative_link active"
+              }>
+              About
             </li>
-            <li>
-              <Link className="creative_link" to="/collection">
-                Collection
-              </Link>
+            <li
+              onClick={() => handleScrollToSectionClick("collection")}
+              className={
+                location.pathname === "/"
+                  ? "creative_link"
+                  : "creative_link active"
+              }>
+              Collection
             </li>
-            <li>
-              <Link className="creative_link" to="/news">
-                Blog
-              </Link>
+            <li
+              onClick={() => handleScrollToSectionClick("blog")}
+              className={
+                location.pathname === "/"
+                  ? "creative_link"
+                  : "creative_link active"
+              }>
+              Blog
             </li>
-            <li>
-              <Link className="creative_link" to="/contact">
-                Contact
-              </Link>
+            <li
+              onClick={() => handleScrollToSectionClick("contact")}
+              className={
+                location.pathname === "/"
+                  ? "creative_link"
+                  : "creative_link active"
+              }>
+              Contact
             </li>
           </ul>
         </div>
@@ -112,30 +153,50 @@ const Navbar = () => {
 
             <div className="nav">
               <ul>
-                <li>
-                  <Link className="creative_link" to="/">
-                    Home
-                  </Link>
+                <li
+                  onClick={() => handleScrollToSectionClick("home")}
+                  className={
+                    location.pathname === "/"
+                      ? "creative_link active"
+                      : "creative_link"
+                  }>
+                  Home
                 </li>
-                <li>
-                  <Link className="creative_link" to="/about">
-                    About
-                  </Link>
+                <li
+                  onClick={() => handleScrollToSectionClick("about")}
+                  className={
+                    location.pathname === "/"
+                      ? "creative_link"
+                      : "creative_link active"
+                  }>
+                  About
                 </li>
-                <li>
-                  <Link className="creative_link" to="/Collection">
-                    Collection
-                  </Link>
+                <li
+                  onClick={() => handleScrollToSectionClick("collection")}
+                  className={
+                    location.pathname === "/"
+                      ? "creative_link"
+                      : "creative_link active"
+                  }>
+                  Collection
                 </li>
-                <li>
-                  <Link className="creative_link" to="/Blog">
-                    Blog
-                  </Link>
+                <li
+                  onClick={() => handleScrollToSectionClick("blog")}
+                  className={
+                    location.pathname === "/"
+                      ? "creative_link"
+                      : "creative_link active"
+                  }>
+                  Blog
                 </li>
-                <li>
-                  <Link className="creative_link" to="/Contact">
-                    Contact
-                  </Link>
+                <li
+                  onClick={() => handleScrollToSectionClick("contact")}
+                  className={
+                    location.pathname === "/"
+                      ? "creative_link"
+                      : "creative_link active"
+                  }>
+                  Contact
                 </li>
               </ul>
             </div>
