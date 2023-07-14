@@ -1,7 +1,7 @@
 /* eslint-disable no-shadow */
 import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
-import Sidebar from "../Sidebar/Sidebar";
+import Sidebar from "../sidebar/Sidebar";
 import Context from "../context/Context";
 import OPENSEA from "../../images/opensea.png";
 import DISCORD from "../../images/discord.png";

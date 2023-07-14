@@ -6,7 +6,7 @@ import METAMASK from "../../images/metamask.png";
 import "./walletSidebar.css";
 import WalletItems from "../walletItems/WalletItems";
 import Context from "../context/Context";
-import Sidebar from "../Sidebar/Sidebar";
+import Sidebar from "../sidebar/Sidebar";
 
 const walletSidebar = () => {
   const { walletConnected, IsConnected } = useContext(Context);

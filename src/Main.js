@@ -9,7 +9,7 @@ import ComingSoon from "./component/comingSoon/ComingSoon";
 import NotFound from "./component/notFound/NotFound";
 import ProtectedPage from "./component/protectedPage/ProtectedPage";
 import Page404 from "./component/page404/Page404";
-import PageTitle from "./component/PageTitle/PageTitle";
+import PageTitle from "./component/pageTitle/PageTitle";
 import SectionDivider from "./component/sectionDivider/SectionDivider";
 import Cookies from "./component/cookies/Cookies";
 import TermsConditions from "./component/termsConditions/TermsConditions";
