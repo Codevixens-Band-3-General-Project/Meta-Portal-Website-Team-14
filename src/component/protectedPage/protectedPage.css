@@ -1,0 +1,72 @@
+.metaportal_fn_protected h4 {
+    margin-bottom: 20px
+}
+
+.metaportal_fn_protected p {
+    margin-bottom: 22px
+}
+
+.stop1 {
+    stop-color: var(--mc1)
+}
+
+.stop2 {
+    stop-color: var(--mc2)
+}
+
+.metaportal_fn_protected {
+    padding: 250px 0
+}
+
+.metaportal_fn_protected .message_holder {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center
+}
+
+.metaportal_fn_protected .icon {
+    display: inline-block;
+    margin-bottom: 30px
+}
+
+.metaportal_fn_protected .icon .fn__svg {
+    width: 146px;
+    height: 146px;
+    display: block
+}
+
+.metaportal_fn_protected .container-custom {
+    max-width: 565px;
+    margin: 0 auto
+}
+
+.metaportal_fn_protected form {
+    display: flex;
+    justify-content: space-between
+}
+
+.metaportal_fn_protected input[type=password] {
+    width: 100%;
+    margin-right: 10px
+}
+
+@media(max-width: 480px) {
+    .metaportal_fn_protected form {
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        -ms-flex-direction: column;
+        -o-flex-direction: column;
+        flex-direction: column
+    }
+
+    .metaportal_fn_protected input[type=password] {
+        margin: 0 0 10px
+    }
+}
+
+@media (max-width: 1040px){ 
+    .metaportal_fn_protected {
+        padding: 130px 0;
+    }
+}
