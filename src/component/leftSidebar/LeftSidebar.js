@@ -175,7 +175,7 @@ const LeftSidebar = () => {
                 </ul>
               </li>
               <li>
-                <Link href="nft-single.html">
+                <Link to="/mintPage">
                   <span className="creative_link">Mint Page</span>
                 </Link>
               </li>

@@ -24,6 +24,7 @@ import About from "./component/About";
 import Contact from "./component/ContactSection/Contact";
 import Blog from "./component/Blog";
 import RoadMap from "./component/Roadmap/Roadmap";
+import MintPage from "./component/MintPage/MintPage";
 
 const Main = () => {
   const currentDate = new Date();
@@ -191,6 +192,7 @@ const Main = () => {
             </>
           }
         />
+        <Route path="/mintPage" element={<MintPage />} />
         <Route
           path="/terms-conditions"
           element={
