@@ -192,7 +192,10 @@ const Main = () => {
             </>
           }
         />
-        <Route path="/mintPage" element={<MintPage />} />
+        <Route
+          path="/mintPage"
+          element={<MintPage date={`${year}-08-21T12:00:00`} />}
+        />
         <Route
           path="/terms-conditions"
           element={
