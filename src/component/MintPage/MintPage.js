@@ -117,7 +117,7 @@ class MintPage extends Component {
                 <h5 className="label">Share:</h5>
                 <ul>
                   <li>
-                    <Link to="#">
+                    <Link to="">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -153,7 +153,7 @@ class MintPage extends Component {
                     </Link>
                   </li>
                   <li>
-                    <Link to="#">
+                    <Link to="">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -189,7 +189,7 @@ class MintPage extends Component {
                     </Link>
                   </li>
                   <li>
-                    <Link to="#">
+                    <Link to="">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -235,7 +235,7 @@ class MintPage extends Component {
                     </Link>
                   </li>
                   <li>
-                    <Link to="#">
+                    <Link to="">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -272,7 +272,7 @@ class MintPage extends Component {
                     </Link>
                   </li>
                   <li>
-                    <Link to="#">
+                    <Link to="">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         version="1.0"
@@ -295,9 +295,9 @@ class MintPage extends Component {
               </div>
               <div className="metaportal_fn_breadcrumbs">
                 <p>
-                  <Link to="index.html">Home</Link>
+                  <Link to="/">Home</Link>
                   <span className="separator">/</span>
-                  <Link to="collection.html">Collection</Link>
+                  <Link to="/collection">Collection</Link>
                   <span className="separator">/</span>
                   <span className="current">Meta Legends #5675</span>
                 </p>
@@ -333,7 +333,7 @@ class MintPage extends Component {
                     <span>View On:</span>
                   </li>
                   <li>
-                    <Link to="#">
+                    <Link to="">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         version="1.0"
@@ -352,7 +352,7 @@ class MintPage extends Component {
                     </Link>
                   </li>
                   <li>
-                    <Link to="#">
+                    <Link to="">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         version="1.0"
@@ -421,8 +421,8 @@ class MintPage extends Component {
                 </Link>
                 <p>
                   By clicking “MINT NOW” button, you agree to our{" "}
-                  <Link to="#">Terms of Service</Link> and our{" "}
-                  <Link to="#">Privacy Policy</Link>.
+                  <Link to="">Terms of Service</Link> and our{" "}
+                  <Link to="">Privacy Policy</Link>.
                 </p>
               </div>
             </div>
