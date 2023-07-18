@@ -9,6 +9,7 @@ const LandingPage = ({
   blogSection,
   collectionSection,
   contactSection,
+  roadmapSection,
   carousel,
 }) => {
   const [showScrollButton, setShowScrollButton] = useState(false);
@@ -83,6 +84,7 @@ const LandingPage = ({
       {carousel}
       {collectionSection}
       {aboutSection}
+      {roadmapSection}
       {blogSection}
       {contactSection}
 
@@ -243,7 +245,7 @@ const SocialSideLinkStyle = styled.div`
     font-weight: 500;
     color: var(--hc);
   }
-  @media (max-width: 1200px) {
+  @media (max-width: 1040px) {
     #sideSocials {
       display: none;
     }

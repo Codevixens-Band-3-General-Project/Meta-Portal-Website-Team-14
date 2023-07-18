@@ -2,9 +2,9 @@
 import { Link } from "react-router-dom";
 import "./sidebarCards.css";
 
-const SidebarCards = ({ text, img }) => (
+const SidebarCards = ({ text, img, link }) => (
   <div className="item">
-    <Link to="/" />
+    <Link to={link} />
     <span className="icon">
       <img src={img} alt="" />
     </span>
