@@ -25,7 +25,6 @@ import Contact from "./component/contactSection/Contact";
 import Blog from "./component/Blog";
 import RoadMap from "./component/roadmap/Roadmap";
 import MintPage from "./component/mint/MintPage";
-import EnvatoHeader from "./component/EnvatoHeader";
 
 const Main = () => {
   const currentDate = new Date();
@@ -81,7 +80,6 @@ const Main = () => {
     <div className="metaportal_fn_main">
       <WalletSidebar />
       <LeftSidebar />
-      {/* <EnvatoHeader /> */}
       <Navbar scrollToSection={scrollToSection} homeRef={homeRef} />
       <Routes>
         <Route
