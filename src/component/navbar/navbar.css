@@ -223,8 +223,8 @@ a.full_link {
 
 .header.active {
   z-index: 60;
-  /* padding: 20px 30px;
-  padding-top: 0; */
+  /* padding: 20px 30px; */
+  padding-bottom: 20px;
   border-bottom-color: rgba(255, 255, 255, 0.08);
 }
 .mobile-envato {
