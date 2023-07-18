@@ -92,8 +92,7 @@ const Home = () => {
               </span>
               <span className="circle" />
             </button>
-            <Link
-              to=""
+            <button type="button"
               className="next"
               onClick={() => swiperRef.current?.slideNext()}>
               <span className="circle" />
@@ -114,7 +113,7 @@ const Home = () => {
                 </svg>
               </span>
               <span className="circle" />
-            </Link>
+            </button>
           </div>
         </div>
 

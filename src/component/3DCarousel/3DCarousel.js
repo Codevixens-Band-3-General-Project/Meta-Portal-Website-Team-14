@@ -124,7 +124,9 @@ const Carousel3D = () => {
             are stored as ERC-721 tokens on the Ethereum blockchain and hosted
             on IPFS.
           </p>
-          <Button text="BUY ON OPENSEA" />
+          <Link to="https://opensea.io">
+            <Button text="BUY ON OPENSEA" />
+          </Link>
         </div>
       </div>
     </section>

@@ -32,16 +32,18 @@ const LeftSidebar = () => {
     {
       name: "OPENSEA",
       img: OPENSEA,
+      link: "https://opensea.io",
     },
     {
       name: "DISCORD",
       img: DISCORD,
+      link: "https://discord.com",
     },
   ];
 
   const sidebarItems = data.map((element) => (
     <li key={element.name}>
-      <SidebarCards text={element.name} img={element.img} />
+      <SidebarCards text={element.name} img={element.img} link={element.link} />
     </li>
   ));
 
@@ -175,7 +177,7 @@ const LeftSidebar = () => {
                 </ul>
               </li>
               <li>
-                <Link href="nft-single.html">
+                <Link to="/mintPage">
                   <span className="creative_link">Mint Page</span>
                 </Link>
               </li>

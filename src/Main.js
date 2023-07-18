@@ -23,6 +23,9 @@ import Privacy from "./component/privacy/Privacy";
 import About from "./component/About";
 import Contact from "./component/contactSection/Contact";
 import Blog from "./component/Blog";
+import RoadMap from "./component/roadmap/Roadmap";
+import MintPage from "./component/mint/MintPage";
+import EnvatoHeader from "./component/EnvatoHeader";
 
 const Main = () => {
   const currentDate = new Date();
@@ -30,6 +33,7 @@ const Main = () => {
 
   const homeRef = useRef(null);
   const aboutRef = useRef(null);
+  const roadmapRef = useRef(null);
   const blogRef = useRef(null);
   const contactRef = useRef(null);
   const collectionRef = useRef(null);
@@ -42,6 +46,8 @@ const Main = () => {
         return aboutRef;
       case "collection":
         return collectionRef;
+      case "roadmap":
+        return roadmapRef;
       case "blog":
         return blogRef;
       case "contact":
@@ -75,6 +81,7 @@ const Main = () => {
     <div className="metaportal_fn_main">
       <WalletSidebar />
       <LeftSidebar />
+      {/* <EnvatoHeader /> */}
       <Navbar scrollToSection={scrollToSection} homeRef={homeRef} />
       <Routes>
         <Route
@@ -89,6 +96,11 @@ const Main = () => {
               aboutSection={
                 <div ref={aboutRef}>
                   <About />
+                </div>
+              }
+              roadmapSection={
+                <div ref={roadmapRef}>
+                  <RoadMap />
                 </div>
               }
               contactSection={
@@ -181,6 +193,10 @@ const Main = () => {
               <Privacy />
             </>
           }
+        />
+        <Route
+          path="/mintPage"
+          element={<MintPage date={`${year}-08-21T12:00:00`} />}
         />
         <Route
           path="/terms-conditions"
