@@ -58,10 +58,3 @@
         display: block;
     }
 }
-
-.metaportal_fn_leftnav.active,
-.metaportal_fn_leftnav_closer.active,
-.metaportal_fn_wallet_closer.active,
-.metaportal_fn_walletbox.active {
-    transform: translateX(0);
-}

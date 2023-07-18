@@ -9,6 +9,7 @@ import Button from "../button/Button";
 import Context from "../context/Context";
 import CircleBtn from "../circleButton/CircleButton";
 import "./navbar.css";
+import EnvatoHeader from "../EnvatoHeader";
 
 const Navbar = ({ scrollToSection, homeRef }) => {
   const [isShown, setIsShown] = useState(false);
@@ -57,6 +58,9 @@ const Navbar = ({ scrollToSection, homeRef }) => {
   return (
     <>
       <div className="metaportal_fn_mobnav">
+        <div className="mobile-envato">
+          <EnvatoHeader />
+        </div>
         <div className="mob_top">
           <div className="social_trigger">
             <CircleBtn clickHandler={OpenSidebar} active={leftSidebar} />
@@ -141,6 +145,7 @@ const Navbar = ({ scrollToSection, homeRef }) => {
       </div>
       <header id="header">
         <div className={`header ${effect ? "active" : ""}`}>
+          <EnvatoHeader />
           <div className="header_in">
             <div className="trigger_logo">
               <CircleBtn clickHandler={OpenSidebar} active={leftSidebar} />
