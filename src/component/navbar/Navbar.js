@@ -1,17 +1,17 @@
-/* eslint-disable react/prop-types */
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
-import React, { useState, useContext, useEffect } from "react";
+/* eslint-disable react/prop-types */
+/* eslint-disable no-shadow */
 import { Link, useLocation } from "react-router-dom";
+import { useState, useContext, useEffect } from "react";
 import logo from "../../images/logo.png";
-import "./Navbar.css";
-import Button from "../Button/Button";
+import Button from "../button/Button";
 import Context from "../context/Context";
-import CircleBtn from "../CircleButton/CircleButton";
+import CircleBtn from "../circleButton/CircleButton";
+import "./navbar.css";
+import EnvatoHeader from "../EnvatoHeader";
 
 const Navbar = ({ scrollToSection, homeRef }) => {
-  const location = useLocation();
-
   const [isShown, setIsShown] = useState(false);
   const { IsConnected } = useContext(Context);
   const { leftSidebar, IsOpen } = useContext(Context);
@@ -34,8 +34,18 @@ const Navbar = ({ scrollToSection, homeRef }) => {
   };
 
   const OpenSidebar = () => {
-    IsOpen(!leftSidebar);
+    IsOpen((leftSidebar) => !leftSidebar);
   };
+
+  const location = useLocation();
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", () =>
+        seteffect(window.pageYOffset > 10),
+      );
+    }
+  }, []);
 
   const handleScrollToSectionClick = (sectionId) => {
     if (location.pathname !== "/") {
@@ -48,6 +58,9 @@ const Navbar = ({ scrollToSection, homeRef }) => {
   return (
     <>
       <div className="metaportal_fn_mobnav">
+        <div className="mobile-envato">
+          <EnvatoHeader />
+        </div>
         <div className="mob_top">
           <div className="social_trigger">
             <CircleBtn clickHandler={OpenSidebar} active={leftSidebar} />
@@ -81,59 +94,58 @@ const Navbar = ({ scrollToSection, homeRef }) => {
           <CircleBtn clickHandler={handleClick} active={isShown} />
         </div>
         <div className={isShown ? "mob_bot active" : "mob_bot"}>
-          <ul>
-            <ul>
-              <li
-                onClick={() => handleScrollToSectionClick("home")}
-                className={
-                  location.pathname === "/"
-                    ? "creative_link active"
-                    : "creative_link"
-                }>
-                Home
-              </li>
-              <li
-                onClick={() => handleScrollToSectionClick("about")}
-                className={
-                  location.pathname === "/"
-                    ? "creative_link"
-                    : "creative_link active"
-                }>
-                About
-              </li>
-              <li
-                onClick={() => handleScrollToSectionClick("collection")}
-                className={
-                  location.pathname === "/"
-                    ? "creative_link"
-                    : "creative_link active"
-                }>
-                Collection
-              </li>
-              <li
-                onClick={() => handleScrollToSectionClick("blog")}
-                className={
-                  location.pathname === "/"
-                    ? "creative_link"
-                    : "creative_link active"
-                }>
-                Blog
-              </li>
-              <li
-                onClick={() => handleScrollToSectionClick("contact")}
-                className={
-                  location.pathname === "/"
-                    ? "creative_link"
-                    : "creative_link active"
-                }>
-                Contact
-              </li>
-            </ul>
+          <ul className="mobile-nav">
+            <li
+              onClick={() => handleScrollToSectionClick("home")}
+              className={
+                location.pathname === "/"
+                  ? "creative_link active"
+                  : "creative_link"
+              }>
+              Home
+            </li>
+            <li
+              onClick={() => handleScrollToSectionClick("about")}
+              className={
+                location.pathname === "/"
+                  ? "creative_link"
+                  : "creative_link active"
+              }>
+              About
+            </li>
+            <li
+              onClick={() => handleScrollToSectionClick("collection")}
+              className={
+                location.pathname === "/"
+                  ? "creative_link"
+                  : "creative_link active"
+              }>
+              Collection
+            </li>
+            <li
+              onClick={() => handleScrollToSectionClick("blog")}
+              className={
+                location.pathname === "/"
+                  ? "creative_link"
+                  : "creative_link active"
+              }>
+              Blog
+            </li>
+            <li
+              onClick={() => handleScrollToSectionClick("contact")}
+              className={
+                location.pathname === "/"
+                  ? "creative_link"
+                  : "creative_link active"
+              }>
+              Contact
+            </li>
           </ul>
         </div>
       </div>
       <header id="header">
         <div className={`header ${effect ? "active" : ""}`}>
+          <EnvatoHeader />
           <div className="header_in">
             <div className="trigger_logo">
               <CircleBtn clickHandler={OpenSidebar} active={leftSidebar} />

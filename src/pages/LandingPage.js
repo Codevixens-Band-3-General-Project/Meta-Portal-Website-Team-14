@@ -2,18 +2,25 @@
 /* eslint-disable react/prop-types */
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+import SearchDropdown from "../component/searchBox/SearchDropdown";
 
 const LandingPage = ({
   aboutSection,
   blogSection,
   collectionSection,
   contactSection,
-  heroSection,
+  roadmapSection,
+  carousel,
 }) => {
   const [showScrollButton, setShowScrollButton] = useState(false);
   const [showSearchButton, setShowSearchButton] = useState(false);
   const [showSideLinks, setShowSideLinks] = useState(false);
   const [scrollTimeout, setScrollTimeout] = useState(null);
+  const [showDropdown, setShowDropdown] = useState(false);
+
+  const handleCloseDropdown = () => {
+    setShowDropdown(!showDropdown);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -71,9 +78,13 @@ const LandingPage = ({
 
   return (
     <>
-      {heroSection}
+      {showDropdown ? (
+        <SearchDropdown closeDropdown={handleCloseDropdown} />
+      ) : null}
+      {carousel}
       {collectionSection}
       {aboutSection}
+      {roadmapSection}
       {blogSection}
       {contactSection}
 
@@ -151,7 +162,12 @@ const LandingPage = ({
 
       {/* <!-- Search --> */}
       <SearchButtonStyle showSearchButton={showSearchButton}>
-        <button type="button" className="sideSearch">
+        <button
+          type="button"
+          className="sideSearch"
+          onClick={() => {
+            setShowDropdown(true);
+          }}>
           <span className="icon">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -229,7 +245,7 @@ const SocialSideLinkStyle = styled.div`
     font-weight: 500;
     color: var(--hc);
   }
-  @media (max-width: 1200px) {
+  @media (max-width: 1040px) {
     #sideSocials {
       display: none;
     }
@@ -269,6 +285,7 @@ const SearchButtonStyle = styled.div`
       bottom: 30px;
     }
   }
+
   @media (max-width: 768px) {
     .sideSearch {
       right: 30px;
@@ -325,6 +342,13 @@ const SearchButtonStyle = styled.div`
     opacity: ${({ showSearchButton }) => (showSearchButton ? "1" : "0")};
     visibility: ${({ showSearchButton }) =>
       showSearchButton ? "visible" : "hidden"};
+  }
+  @media (max-width: 1040px) {
+    .sideSearch {
+      transform: translateX(
+        ${({ showSearchButton }) => (showSearchButton ? "0" : "200px")}
+      );
+    }
   }
 `;
 

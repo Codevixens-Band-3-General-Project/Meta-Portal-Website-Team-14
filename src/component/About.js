@@ -181,7 +181,7 @@ const About = () => (
                 href="https://www.youtube.com/watch?v=7e90gBu4pas">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  //   xmlns:xlink="http://www.w3.org/1999/xlink"
+                  // xmlns:xlink="http://www.w3.org/1999/xlink"
                   version="1.1"
                   id="play"
                   x="0px"
