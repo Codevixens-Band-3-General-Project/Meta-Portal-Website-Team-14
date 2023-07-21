@@ -41,7 +41,12 @@ const Carousel3D = () => {
   return (
     <section id="home" className="dcarouselCont">
       <div className="container">
-        <h3 className="fn__maintitle big">Meta Legends</h3>
+        <h3
+          className="fn__maintitle big carousel-header"
+          data-text="Meta Legends"
+          data-align="center">
+          Meta Legends
+        </h3>
 
         <div className="fn_cs_slider" data-responsive="on">
           <div className="slider_top">
