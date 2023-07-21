@@ -82,8 +82,8 @@ const LandingPage = ({
         <SearchDropdown closeDropdown={handleCloseDropdown} />
       ) : null}
       {carousel}
-      {collectionSection}
       {aboutSection}
+      {collectionSection}
       {roadmapSection}
       {blogSection}
       {contactSection}

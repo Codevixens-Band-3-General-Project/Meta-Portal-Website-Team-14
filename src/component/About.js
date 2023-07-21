@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 import React from "react";
 import styled from "styled-components";
 import VideoImage from "../assets/video/1.jpg";
@@ -181,7 +182,7 @@ const About = () => (
                 href="https://www.youtube.com/watch?v=7e90gBu4pas">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  // xmlns:xlink="http://www.w3.org/1999/xlink"
+                  xmlnsXlink="http://www.w3.org/1999/xlink"
                   version="1.1"
                   id="play"
                   x="0px"
@@ -233,7 +234,7 @@ const AboutStyles = styled.div`
   margin: 0;
   display: block;
   box-sizing: border-box;
-  padding: 150px 0;
+  /* padding: 150px 0; */
   .fn_cs_about {
     position: relative;
     display: flex;
@@ -689,6 +690,9 @@ const AboutStyles = styled.div`
     .fn_cs_about .left_part .bg_overlay {
       right: 0;
     }
+  }
+  .fn_cs_video a {
+    color: unset;
   }
 `;
 
