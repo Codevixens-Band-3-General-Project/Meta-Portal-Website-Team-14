@@ -1,0 +1,83 @@
+ .metaportal_fn_privacy h3 {
+     margin-bottom: 15px;
+     padding-top: 12px;
+ }
+
+ .fn__maintitle {
+     margin: 0;
+     padding: 0;
+     font-weight: 300;
+     letter-spacing: .5px;
+     font-size: 36px;
+     line-height: 1;
+ }
+
+ .fn__maintitle {
+     z-index: 5;
+     position: relative;
+ }
+
+ .metaportal_fn_privacy h3:before {
+     top: 14px;
+ }
+
+ .fn__maintitle:before {
+     position: absolute;
+     z-index: -1;
+     top: 2px;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: -moz-linear-gradient(var(--mc1), var(--mc2));
+     background: -webkit-linear-gradient(var(--mc1), var(--mc2));
+     background: linear-gradient(var(--mc1), var(--mc2));
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+     content: attr(data-text);
+ }
+
+.metaportal_fn_privacy .fn_cs_divider {
+    margin-bottom: 35px;
+}
+
+.fn_cs_divider .divider {
+    position: absolute;
+    margin-top: -1px;
+    width: 140px;
+    height: 2px;
+    background-color: rgba(255, 255, 255, .5);
+}
+
+.fn_cs_divider .divider:before {
+    left: -3px;
+}
+
+.fn_cs_divider .divider:after,
+.fn_cs_divider .divider:before {
+    width: 16px;
+    content: '';
+    position: absolute;
+    height: 2px;
+    background-color: rgba(255, 255, 255, .5);
+    transform: rotate(-65deg);
+}
+
+.fn_cs_divider .divider:after {
+    left: 3px;
+}
+
+
+.fn_cs_divider .divider:after,
+.fn_cs_divider .divider:before {
+    width: 16px;
+    content: '';
+    position: absolute;
+    height: 2px;
+    background-color: rgba(255, 255, 255, .5);
+    transform: rotate(-65deg);
+}
+
+
+ p {
+    margin-bottom: 27px;
+}
