@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-# MetaPortal NFT Portfolio App
-=======
 # Metaportal NFT - Portfolio Web App
->>>>>>> 5edd984cf5fc9e57135938169a471feebf7f6d1f
 
 This is an App Frontend built with [React](https://reactjs.org/) (Frontend)
 
