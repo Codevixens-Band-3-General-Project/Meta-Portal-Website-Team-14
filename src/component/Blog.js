@@ -133,6 +133,7 @@ const Blog = () => (
 const BlogStyles = styled.div`
   #news {
     padding: 144px 0 150px;
+    padding-top: 0;
   }
   #news .fn__maintitle {
     margin-bottom: 140px;
