@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
-import "./pageTitle.css";
+import "./PageTitle.css";
 
 const PageTitle = ({ title }) => (
   <div className="metaportal_fn_pagetitle">
