@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import './CollectionSection.css';
-import img1 from "../Images/1.jpg";
-import img2 from "../Images/2.jpg";
-import img3 from "../Images/3.jpg";
-import img4 from "../Images/4.jpg";
-import img5 from "../Images/5.jpg";
-import img6 from "../Images/6.jpg";
-import img7 from "../Images/7.jpg";
-import img8 from "../Images/8.jpg";
+import img1 from "../../assets/Images/1.jpg"
+import img2 from "../../assets/Images/2.jpg";
+import img3 from "../../assets/Images/3.jpg";
+import img4 from "../../assets/Images/4.jpg";
+import img5 from "../../assets/Images/5.jpg";
+import img6 from "../../assets/Images/6.jpg";
+import img7 from "../../assets/Images/7.jpg";
+import img8 from "../../assets/Images/8.jpg";
 
 const CollectionSection = () => {
 

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -77,8 +77,8 @@ const RoadMap = () => {
                 <h3 className="fn__maintitle big" data-text="RoadMap" data-align="center">RoadMap</h3>
                  <div className="fn_cs_roadmap">
                     <div className="step_holder">
-						<div className="step_in" style={{width: '100%'}} />
-					</div>
+                        <div className="step-in" />
+                    </div>
                     <div className="slider_holder">
                         <div className="swiper-container swiper-container-horizontal">
                             <div
