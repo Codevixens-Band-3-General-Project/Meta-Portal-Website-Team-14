@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./CollectionSection.css";
+import "./collectionSection.css";
 import img1 from "../../assets/Images/1.jpg";
 import img2 from "../../assets/Images/2.jpg";
 import img3 from "../../assets/Images/3.jpg";

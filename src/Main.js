@@ -23,9 +23,9 @@ import Privacy from "./component/privacy/Privacy";
 import About from "./component/About";
 import Contact from "./component/contactSection/Contact";
 import Blog from "./component/Blog";
-import RoadMap from "./component/roadMap/Roadmap";
 import MintPage from "./component/mint/MintPage";
 import CollectionSection from "./component/collection/CollectionSection";
+import RoadMap from "./component/roadmap/RoadMap";
 
 const Main = () => {
   const currentDate = new Date();

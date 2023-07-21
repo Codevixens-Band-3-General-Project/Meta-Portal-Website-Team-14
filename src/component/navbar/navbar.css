@@ -191,7 +191,6 @@ a.full_link {
 }
 
 .header {
-  /* padding: 30px; */
   position: fixed;
   right: 0;
   z-index: 25;
@@ -223,7 +222,6 @@ a.full_link {
 
 .header.active {
   z-index: 60;
-  /* padding: 20px 30px; */
   padding-bottom: 20px;
   border-bottom-color: rgba(255, 255, 255, 0.08);
 }

@@ -4,7 +4,7 @@ import { Autoplay } from "swiper/modules";
 import data from "./data";
 import "swiper/css";
 import "swiper/css/autoplay";
-import "./roadmap.css";
+import "./roadMap.css";
 
 const RoadMap = () => (
   <section id="roadmap">

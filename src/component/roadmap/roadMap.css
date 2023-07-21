@@ -6,6 +6,10 @@
   padding: 144px 0 150px;
 }
 
+#roadmap {
+  padding-top: 0;
+}
+
 .fn_cs_roadmap .swiper-slide .desc {
   margin: 0;
 }
